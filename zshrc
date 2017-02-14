@@ -1,14 +1,20 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/claudine/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="clean"
+# Path to your oh-my-zsh installation.
+  export ZSH=/home/ubuntu/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -36,7 +42,7 @@ ZSH_THEME="clean"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -45,23 +51,13 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git git-flow history osx taskwarrior tig vi-mode web-search)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:$HOME/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/Applications/MAMP/Library/bin:$PATH
-export MANPATH=/usr/local/man:/Applications/MAMP/Library/share/man/:$MANPATH
-
-### Liquid Prompt
-
-if [ -f /usr/local/share/liquidprompt ]; then
-    . /usr/local/share/liquidprompt
-      fi
-
-
-### Other
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -77,7 +73,7 @@ if [ -f /usr/local/share/liquidprompt ]; then
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -87,26 +83,3 @@ if [ -f /usr/local/share/liquidprompt ]; then
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Git log with graph.
-# See http://gist.github.com/223905
-alias gitl='git log --pretty=oneline --abbrev-commit --all --graph --color'
-
-# https://github.com/rupa/z via homebrew
-. `brew --prefix`/etc/profile.d/z.sh
-
-# Private configuration.
-source ~/.zshrc.private
-
-# iterm2 integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# rbenv
-eval "$(rbenv init -)"
-
-# List Taskwarrior tasks.
-task
-
-# Start ssh-agent.
-ssh-agent
-ssh-add "${HOME}/.ssh/id_rsa"
