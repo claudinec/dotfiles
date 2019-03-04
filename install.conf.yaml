@@ -5,6 +5,7 @@
     ~/.gnupg: gnupg.private/
     ~/.gvimrc: gvimrc
     ~/.habitrpgrc: habitrpgrc.private
+    ~/.irssi: irssi/
     ~/.jrnl_config: jrnl
     ~/.lbdbrc: lbdbrc
     ~/.ledgerrc: ledgerrc.private
