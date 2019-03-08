@@ -404,7 +404,9 @@ settings = {
   core = {
     real_name = "Claudine Chionh";
     user_name = "claudine";
-    nick = "claudine";
+    nick = "claudinec";
   };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { autolog = "yes"; theme = "greenbox"; };
 };
+logs = { };

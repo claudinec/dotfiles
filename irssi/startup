@@ -1,0 +1,8 @@
+/SET autolog ON
+/SET nick claudine
+/SET alternate_nick claudinec
+/SET theme greenbox
+
+/CONNECT Freenode
+/CONNECT irc.linuxchix.org
+
