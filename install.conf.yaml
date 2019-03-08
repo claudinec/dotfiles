@@ -2,11 +2,11 @@
 - link:
     ~/.config/alot: alot/
     ~/.config/alot/config: alot/config.private
+    ~/.config/s: s/
     ~/.gnupg: gnupg.private/
     ~/.gvimrc: gvimrc
     ~/.habitrpgrc: habitrpgrc.private
     ~/.irssi: irssi/
-    ~/.irssi/config: irssi/config.private
     ~/.jrnl_config: jrnl
     ~/.lbdbrc: lbdbrc
     ~/.ledgerrc: ledgerrc.private
