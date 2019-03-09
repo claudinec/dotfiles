@@ -64,3 +64,6 @@
 [submodule "vim/bundle/rainbow_levels"]
 	path = vim/bundle/rainbow_levels
 	url = https://github.com/thiagoalessio/rainbow_levels.vim
+[submodule "vim/bundle/vim-plist"]
+	path = vim/bundle/vim-plist
+	url = https://github.com/darfink/vim-plist

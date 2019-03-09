@@ -404,9 +404,14 @@ settings = {
   core = {
     real_name = "Claudine Chionh";
     user_name = "claudine";
-    nick = "claudinec";
+    nick = "claudine";
   };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { autolog = "yes"; theme = "greenbox"; };
+  "fe-common/core" = {
+    autolog = "yes";
+    theme = "greenbox";
+    autolog_colors = "yes";
+  };
+  "irc/core" = { alternate_nick = "claudinec"; };
 };
 logs = { };
