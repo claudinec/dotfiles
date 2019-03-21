@@ -410,7 +410,8 @@ settings = {
   "fe-common/core" = {
     autolog = "yes";
     theme = "greenbox";
-    autolog_colors = "yes";
+    autolog_colors = "no";
+    awaylog_colors = "no";
   };
   "irc/core" = { alternate_nick = "claudinec"; };
 };
