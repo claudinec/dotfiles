@@ -45,7 +45,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git git-flow gpg-agent history osx pyenv vi-mode web-search)
+plugins=(brew git git-flow gpg-agent history osx taskwarrior vi-mode web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,6 +100,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # List Taskwarrior tasks.
 # task ready
+task next
 
 # List todo.txt top priority tasks.
 # todo.sh lsp A
