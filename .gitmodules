@@ -67,3 +67,6 @@
 [submodule "vim/bundle/vim-plist"]
 	path = vim/bundle/vim-plist
 	url = https://github.com/darfink/vim-plist
+[submodule "vim/bundle/VOoM"]
+	path = vim/bundle/VOoM
+	url = https://github.com/vim-scripts/VOoM
