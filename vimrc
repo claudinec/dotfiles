@@ -44,7 +44,7 @@ set writebackup
 colorscheme desert
 
 " Vimwiki
-let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'auto_export': 1}]
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'auto_export': 1}]
 
 " NERDTree
 " How can I open NERDTree automatically when vim starts up on opening a directory?
