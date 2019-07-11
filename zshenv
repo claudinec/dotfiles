@@ -9,3 +9,6 @@ export PERL5LIB=$PERL5LIB:~/perl5/src/WebService-HabitRPG/lib
 
 export NETHACKOPTIONS="color,gender:female"
 
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
