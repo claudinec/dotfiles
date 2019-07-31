@@ -1,7 +1,6 @@
 - clean: ['~']
 - link:
-    ~/.config/alot: alot/
-    ~/.config/alot/config: alot/config.private
+    ~/.config/alot: alot.private/
     ~/.config/s: s/
     ~/.gnupg: gnupg.private/
     ~/.gvimrc: gvimrc
