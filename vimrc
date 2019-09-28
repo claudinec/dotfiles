@@ -42,7 +42,8 @@ set textwidth=72
 
 set writebackup
 
-colorscheme desert
+" colorscheme desert
+colorscheme corvine
 
 " Vimwiki
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'auto_export': 1}]

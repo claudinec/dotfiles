@@ -73,3 +73,6 @@
 [submodule "vim/bundle/nerdtree-fugitive"]
 	path = vim/bundle/nerdtree-fugitive
 	url = https://github.com/low-ghost/nerdtree-fugitive
+[submodule "vim/bundle/vim-corvine"]
+	path = vim/bundle/vim-corvine
+	url = https://github.com/arzg/vim-corvine
