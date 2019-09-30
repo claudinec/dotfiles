@@ -76,3 +76,6 @@
 [submodule "vim/bundle/vim-corvine"]
 	path = vim/bundle/vim-corvine
 	url = https://github.com/arzg/vim-corvine
+[submodule "vim/bundle/vim-bufferline"]
+	path = vim/bundle/vim-bufferline
+	url = https://github.com/bling/vim-bufferline
