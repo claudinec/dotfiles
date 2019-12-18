@@ -51,7 +51,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:$HOME/.composer/vendor/bin:$HOME/miniconda3/bin:/usr/local/texlive/2019/bin/x86_64-darwin:/usr/local/sbin:$PATH
+# export PATH=$HOME/bin:$HOME/.composer/vendor/bin:$HOME/miniconda3/bin:/usr/local/texlive/2019/bin/x86_64-darwin:/usr/local/sbin:$PATH
+export PATH=$HOME/bin:$HOME/.composer/vendor/bin:/usr/local/texlive/2019/bin/x86_64-darwin:/usr/local/sbin:$PATH
 export MANPATH=/usr/local/texlive/2019/texmf-dist/doc/man:/usr/local/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2019/texmf-dist/doc/info:$INFOPATH
 
