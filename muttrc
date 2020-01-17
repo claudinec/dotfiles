@@ -39,7 +39,7 @@ macro index \cb |urlview\n
 macro pager \cb |urlview\n
 
 # GPG
-source /usr/local/share/doc/mutt/samples/gpg.rc
+# source /usr/local/share/doc/mutt/samples/gpg.rc
 
 # Notmuch.
 source ~/.dotfiles/muttrc.notmuch
