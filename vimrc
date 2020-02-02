@@ -62,3 +62,6 @@ nmap ga <Plug>(EasyAlign)
 
 " Startify
 let g:startify_bookmarks = [ {'c': '~/.vimrc'}, '~/.zshrc' ]
+
+" FZF
+set rtp+=/usr/local/opt/fzf
