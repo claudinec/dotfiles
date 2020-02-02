@@ -91,3 +91,6 @@
 [submodule "vim/bundle/vim-startify"]
 	path = vim/bundle/vim-startify
 	url = https://github.com/mhinz/vim-startify
+[submodule "vim/bundle/vim-zettel"]
+	path = vim/bundle/vim-zettel
+	url = git@github.com:michal-h21/vim-zettel.git
