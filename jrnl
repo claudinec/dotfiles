@@ -7,7 +7,8 @@
   "default_minute": 0, 
   "highlight": true, 
   "journals": {
-    "default": "/Users/claudine/Documents/jrnl/journal.txt"
+    "default": "/Users/claudine/Documents/jrnl/journal.txt",
+    "ios": "~/Library/Mobile Documents/iCloud~is~workflow~my~workflows/Documents/jrnl/journal.txt"
   }, 
   "tagsymbols": "@"
 }
