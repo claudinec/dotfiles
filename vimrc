@@ -45,7 +45,8 @@ set writebackup
 " colorscheme desert
 colorscheme corvine
 
-" Vimwiki
+" Vimwiki and Zettel
+let g:zettel_format = "%Y%m%d-%H%M"
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'auto_export': 1}]
 
 " NERDTree
