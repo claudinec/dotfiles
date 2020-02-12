@@ -12,7 +12,8 @@ set postponed="~/Mail/postponed"
 set sendmail="/usr/local/bin/msmtp"
 set sendmail_wait=5
 set sort="threads"
-set sort_aux="last-date-received"
+# set sort_aux="last-date-received"
+set sort_aux="last-date-sent"
 set visual="mvim"   # MacVim
 
 source ~/.muttrc.aliases
