@@ -5,6 +5,7 @@
     ~/.gnupg: gnupg.private/
     ~/.gvimrc: gvimrc
     ~/.habitrpgrc: habitrpgrc.private
+    ~/.imapfilter: imapfilter.private/
     ~/.irssi: irssi/
     ~/.jrnl_config: jrnl
     ~/.latexmkrc: latexmkrc
