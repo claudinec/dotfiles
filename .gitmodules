@@ -94,3 +94,6 @@
 [submodule "vim/bundle/vim-zettel"]
 	path = vim/bundle/vim-zettel
 	url = git@github.com:michal-h21/vim-zettel.git
+[submodule "vim/bundle/timestamp"]
+	path = vim/bundle/timestamp
+	url = https://github.com/vim-scripts/timestamp.vim

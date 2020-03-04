@@ -46,8 +46,8 @@ set writebackup
 colorscheme corvine
 
 " Vimwiki and Zettel
-let g:zettel_format = "%Y%m%d-%H%M"
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'auto_export': 1}]
+let g:zettel_format = "%Y%m%d-%H%M"
 
 " NERDTree
 " How can I open NERDTree automatically when vim starts up on opening a directory?
