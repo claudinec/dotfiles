@@ -46,7 +46,7 @@ set writebackup
 colorscheme corvine
 
 " Vimwiki and Zettel
-let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'auto_export': 1}]
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/', 'auto_export': 1}]
 let g:zettel_format = "%Y%m%d-%H%M"
 
 " NERDTree
