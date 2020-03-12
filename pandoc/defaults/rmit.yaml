@@ -1,0 +1,7 @@
+# Defaults for RMIT (Business) assignments.
+metadata:
+    author: Claudine Chionh
+lang: en-AU
+papersize: a4
+documentclass: scrartcl
+fontfamily: noto

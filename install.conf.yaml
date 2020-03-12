@@ -19,6 +19,7 @@
     ~/.notmuch-config: notmuch-config
     ~/.offlineimap: offlineimap.private/
     ~/.offlineimaprc: offlineimaprc.private
+    ~/.pandoc: pandoc/
     ~/.signature: signatures.private/personal.txt
     ~/.signature.ascm: signatures/ascm.txt
     ~/.task: task.private/
