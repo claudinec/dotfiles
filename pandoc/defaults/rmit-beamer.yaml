@@ -1,0 +1,9 @@
+# Defaults for RMIT beamer presentations.
+to: beamer
+metadata:
+    author: Claudine Chionh
+    lang: en-AU
+    papersize: a4
+institute: RMIT University
+theme: Szeged
+colortheme: beaver

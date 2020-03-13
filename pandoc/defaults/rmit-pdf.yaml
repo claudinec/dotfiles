@@ -5,3 +5,5 @@ metadata:
     - affiliation: RMIT University
     lang: en-AU
     papersize: a4
+documentclass: scrartcl
+fontfamily: noto
