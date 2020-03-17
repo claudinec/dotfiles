@@ -1,11 +1,9 @@
 - clean: ['~']
 - link:
-    ~/.config/alot: alot.private/
+    ~/.antigen: antigen/
     ~/.config/s: s/
     ~/.gnupg: gnupg.private/
     ~/.gvimrc: gvimrc
-    ~/.habitrpgrc: habitrpgrc.private
-    ~/.imapfilter: imapfilter.private/
     ~/.irssi: irssi/
     ~/.jrnl_config: jrnl
     ~/.latexmkrc: latexmkrc
@@ -17,16 +15,9 @@
     ~/.muttrc: muttrc
     ~/.muttrc.private: muttrc.private
     ~/.notmuch-config: notmuch-config
-    ~/.offlineimap: offlineimap.private/
-    ~/.offlineimaprc: offlineimaprc.private
     ~/.pandoc: pandoc/
     ~/.signature: signatures.private/personal.txt
     ~/.signature.ascm: signatures/ascm.txt
-    ~/.task: task.private/
-    ~/.taskrc: taskrc
-    ~/.tigrc: tigrc
-    ~/.timewarrior/timewarrior.cfg: timewarrior.cfg
-    ~/.todo: todo.private/
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.zshenv: zshenv
