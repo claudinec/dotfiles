@@ -43,7 +43,8 @@ set textwidth=72
 set writebackup
 
 " colorscheme desert
-colorscheme torte
+" colorscheme torte
+colorscheme evening
 
 " Vimwiki and Zettel
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1}]
