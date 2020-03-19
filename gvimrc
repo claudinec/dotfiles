@@ -1,4 +1,4 @@
 set columns=80
-set guifont=Noto_Mono:h14
-set lines=50
+set guifont=Noto\ Mono\ 12
+set lines=48
 
