@@ -1,4 +1,4 @@
-#files: 942	version: 5.7.1
+#files: 941	version: 5.7.1
 
 _comps=(
 '-' '_precommand'
@@ -1983,7 +1983,7 @@ autoload -Uz _zshz _bootctl _busctl _curl _hostnamectl \
             _zcalc_line _zcompile _zed _zftp _zle \
             _zmodload _zmv _zpty _zsh-mime-handler _zsocket \
             _zstyle _ztodo _hwinfo _osc _SUSEconfig \
-            _yast _zypper _zshz
+            _yast _zypper
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs

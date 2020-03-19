@@ -1,5 +1,5 @@
 #-- START ZCACHE GENERATED FILE
-#-- GENERATED: Tue 17 Mar 12:56:05 AEDT 2020
+#-- GENERATED: Wed 18 Mar 22:24:27 AEDT 2020
 #-- ANTIGEN develop
 _antigen () {
 	local -a _1st_arguments
@@ -36,7 +36,7 @@ antigen () {
   return 0;
 }
 typeset -gaU fpath path
-fpath+=(/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib /home/claudine/.antigen/bundles/agkozak/zsh-z /home/claudine/.antigen/bundles/andrewferrier/fzf-z) path+=(/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib /home/claudine/.antigen/bundles/agkozak/zsh-z /home/claudine/.antigen/bundles/andrewferrier/fzf-z)
+fpath+=(/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib /home/claudine/dotfiles/antigen/bundles/agkozak/zsh-z /home/claudine/dotfiles/antigen/bundles/andrewferrier/fzf-z) path+=(/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib /home/claudine/dotfiles/antigen/bundles/agkozak/zsh-z /home/claudine/dotfiles/antigen/bundles/andrewferrier/fzf-z)
 _antigen_compinit () {
   autoload -Uz compinit; compinit -i -d "/home/claudine/.antigen/.zcompdump"; compdef _antigen antigen
   add-zsh-hook -D precmd _antigen_compinit
@@ -48,27 +48,27 @@ if [[ -n "/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh" ]]; then
   ZSH="/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh"; ZSH_CACHE_DIR="/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/cache/"
 fi
 #--- BUNDLES BEGIN
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/bzr.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/clipboard.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/compfix.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/completion.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/correction.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/diagnostics.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/directories.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/functions.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/git.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/grep.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/history.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/key-bindings.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/misc.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/nvm.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/prompt_info_functions.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/spectrum.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/termsupport.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/lib/theme-and-appearance.zsh';
-source '/home/claudine/.antigen/bundles/agkozak/zsh-z/zsh-z.plugin.zsh';
-source '/home/claudine/.antigen/bundles/andrewferrier/fzf-z/fzf-z.plugin.zsh';
-source '/home/claudine/.antigen/bundles/robbyrussell/oh-my-zsh/themes/candy.zsh-theme.antigen-compat';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/bzr.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/clipboard.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/compfix.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/completion.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/correction.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/diagnostics.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/directories.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/functions.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/git.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/grep.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/history.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/key-bindings.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/misc.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/nvm.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/prompt_info_functions.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/spectrum.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/termsupport.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/lib/theme-and-appearance.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/agkozak/zsh-z/zsh-z.plugin.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/andrewferrier/fzf-z/fzf-z.plugin.zsh';
+source '/home/claudine/dotfiles/antigen/bundles/robbyrussell/oh-my-zsh/themes/candy.zsh-theme.antigen-compat';
 
 #--- BUNDLES END
 typeset -gaU _ANTIGEN_BUNDLE_RECORD; _ANTIGEN_BUNDLE_RECORD=('https://github.com/robbyrussell/oh-my-zsh.git lib plugin true' 'https://github.com/agkozak/zsh-z.git / plugin true' 'https://github.com/andrewferrier/fzf-z.git / plugin true' 'https://github.com/robbyrussell/oh-my-zsh.git themes/candy.zsh-theme theme true')
