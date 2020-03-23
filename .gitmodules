@@ -100,3 +100,9 @@
 [submodule "vim/bundle/nerdtree-ag"]
 	path = vim/bundle/nerdtree-ag
 	url = https://github.com/taiansu/nerdtree-ag
+[submodule "vim/bundle/vim-pandoc"]
+	path = vim/bundle/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc
+[submodule "vim/bundle/vim-pandoc-syntax"]
+	path = vim/bundle/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax
