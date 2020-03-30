@@ -1,9 +1,8 @@
 # Defaults for RMIT (Business) assignments.
 metadata:
-    author:
-    - name: Claudine Chionh
-    - affiliation: RMIT University student number s9905220
+    author: Claudine Chionh (s9905220)
     lang: en-AU
     papersize: a4
-documentclass: scrartcl
-fontfamily: noto
+    fontfamily: tgpagella
+    urlcolor: blue
+
