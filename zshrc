@@ -101,7 +101,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # List Taskwarrior tasks.
 # task ready
-task next
+# task next
 
 # List todo.txt top priority tasks.
 # todo.sh lsp A
