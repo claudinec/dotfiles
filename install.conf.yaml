@@ -19,15 +19,12 @@
     ~/powerline: powerline/
     ~/.signature: signatures.private/personal.txt
     ~/.signature.ascm: signatures/ascm.txt
-<<<<<<< HEAD
-=======
     ~/.task: task.private/
     ~/.taskrc: taskrc
     ~/.tigrc: tigrc
     ~/.timewarrior/timewarrior.cfg: timewarrior.cfg
     ~/.tmux.conf: tmux.conf
     ~/.todo: todo.private/
->>>>>>> 4d77cc6... Add tmux and powerline.
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.zshenv: zshenv
