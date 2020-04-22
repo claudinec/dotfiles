@@ -20,12 +20,14 @@
     ~/.offlineimap: offlineimap.private/
     ~/.offlineimaprc: offlineimaprc.private
     ~/.pandoc: pandoc/
+    ~/powerline: powerline/
     ~/.signature: signatures.private/personal.txt
     ~/.signature.ascm: signatures/ascm.txt
     ~/.task: task.private/
     ~/.taskrc: taskrc
     ~/.tigrc: tigrc
     ~/.timewarrior/timewarrior.cfg: timewarrior.cfg
+    ~/.tmux.conf: tmux.conf
     ~/.todo: todo.private/
     ~/.vim: vim
     ~/.vimrc: vimrc
