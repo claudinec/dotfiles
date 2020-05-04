@@ -62,7 +62,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Startify
-let g:startify_bookmarks = [ {'c': '~/.vimrc'}, '~/.zshrc' ]
+let g:startify_bookmarks = [ {'w': '~/Documents/vimwiki/index.md'},  {'c': '~/.vimrc'}, '~/.zshrc' ]
 
 " FZF
 set rtp+=/usr/local/opt/fzf
