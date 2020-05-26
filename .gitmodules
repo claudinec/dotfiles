@@ -100,3 +100,6 @@
 [submodule "vim/bundle/nerdtree-ag"]
 	path = vim/bundle/nerdtree-ag
 	url = https://github.com/taiansu/nerdtree-ag
+[submodule "vim/bundle/wordcount"]
+	path = vim/bundle/wordcount
+	url = https://github.com/chesleytan/wordcount.vim
