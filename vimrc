@@ -67,3 +67,8 @@ let g:startify_bookmarks = [ {'w': '~/Documents/vimwiki/index.md'},  {'c': '~/.v
 
 " FZF
 set rtp+=/usr/local/opt/fzf
+
+" statusline
+set laststatus=2
+set statusline+=%{wordCount#WordCount()}
+
