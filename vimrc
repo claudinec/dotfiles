@@ -42,8 +42,8 @@ set textwidth=72
 
 set writebackup
 
-" colorscheme desert
-colorscheme torte
+colorscheme desert
+" colorscheme torte
 " colorscheme evening
 
 " Vimwiki and Zettel
