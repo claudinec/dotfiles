@@ -103,3 +103,6 @@
 [submodule "vim/bundle/wordcount"]
 	path = vim/bundle/wordcount
 	url = https://github.com/chesleytan/wordcount.vim
+[submodule "vim/bundle/vim-lilypond-integrator"]
+	path = vim/bundle/vim-lilypond-integrator
+	url = https://github.com/gisraptor/vim-lilypond-integrator
