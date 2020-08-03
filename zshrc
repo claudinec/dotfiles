@@ -108,3 +108,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # ssh-agent.
 ssh-add -K ~/.ssh/id_rsa
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
