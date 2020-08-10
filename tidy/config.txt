@@ -1,0 +1,8 @@
+// HTML Tidy config.
+break-before-br: yes
+clean: yes
+fix-style-tags: yes
+indent: auto
+merge-divs: auto
+merge-spans: auto
+
