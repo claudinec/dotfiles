@@ -2,6 +2,7 @@
 - link:
     ~/.config/alot: alot.private/
     ~/.config/s: s/
+    ~/.gitconfig: gitconfig.private
     ~/.gnupg: gnupg.private/
     ~/.gvimrc: gvimrc
     ~/.habitrpgrc: habitrpgrc.private
