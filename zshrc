@@ -110,6 +110,14 @@ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nf
 # List todo.txt top priority tasks.
 # todo.sh lsp A
 
+# Homebrew -- see https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # ssh-agent.
 ssh-add -K ~/.ssh/id_rsa
 
@@ -159,3 +167,4 @@ fi
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
