@@ -1,6 +1,7 @@
 - clean: ['~']
 - link:
     ~/.config/alot: alot.private/
+    ~/.config/beets: beets.private/
     ~/.config/s: s/
     ~/.gitconfig: gitconfig.private
     ~/.gnupg: gnupg.private/
