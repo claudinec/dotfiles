@@ -8,7 +8,7 @@
     ~/.gvimrc: gvimrc
     ~/.habitrpgrc: habitrpgrc.private
     ~/.imapfilter: imapfilter.private/
-    ~/.irssi: irssi/
+    ~/.irssi/config: irssi/config.private
     ~/.jrnl_config: jrnl
     ~/.latexmkrc: latexmkrc
     ~/.lbdbrc: lbdbrc
