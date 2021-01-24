@@ -3,11 +3,13 @@
     ~/.config/alot: alot.private/
     ~/.config/beets: beets.private/
     ~/.config/s: s/
+    ~/.config/youtube-dl: youtube-dl/
     ~/.gitconfig: gitconfig.private
     ~/.gnupg: gnupg.private/
     ~/.gvimrc: gvimrc
     ~/.habitrpgrc: habitrpgrc.private
     ~/.imapfilter: imapfilter.private/
+    ~/.irssi: irssi/
     ~/.irssi/config: irssi/config.private
     ~/.jrnl_config: jrnl
     ~/.latexmkrc: latexmkrc

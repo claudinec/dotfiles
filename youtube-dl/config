@@ -1,0 +1,10 @@
+# youtube-dl command-line options
+
+--mark-watched
+--max-downloads 25
+
+## Output template
+
+# -o '%(uploader)s/%(upload_date)s %(title)s.%(ext)s'
+-o '%(creator)s/%(release_date)s-%(title)s-%(id)s.%(ext)s'
+
