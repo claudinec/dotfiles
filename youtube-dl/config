@@ -1,5 +1,5 @@
 # youtube-dl command-line options
-
+--mark-watched
 --max-downloads 25
 
 ## Output template
