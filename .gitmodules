@@ -109,3 +109,9 @@
 [submodule "vim/bundle/wordcount"]
 	path = vim/bundle/wordcount
 	url = https://github.com/chesleytan/wordcount.vim
+[submodule "antigen/bundles/agkozak/zsh-z"]
+	path = antigen/bundles/agkozak/zsh-z
+	url = git@github.com:agkozak/zsh-z.git
+[submodule "antigen/bundles/ohmyzsh/ohmyzsh"]
+	path = antigen/bundles/ohmyzsh/ohmyzsh
+	url = git@github.com:ohmyzsh/ohmyzsh.git
