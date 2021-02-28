@@ -2,13 +2,12 @@
 - link:
     ~/.config/alot: alot.private/
     ~/.config/beets: beets.private/
+    ~/.antigen: antigen/
     ~/.config/s: s/
     ~/.config/youtube-dl: youtube-dl/
     ~/.gitconfig: gitconfig.private
     ~/.gnupg: gnupg.private/
     ~/.gvimrc: gvimrc
-    ~/.habitrpgrc: habitrpgrc.private
-    ~/.imapfilter: imapfilter.private/
     ~/.irssi: irssi/
     ~/.irssi/config: irssi/config.private
     ~/.jrnl_config: jrnl
@@ -21,15 +20,15 @@
     ~/.muttrc: muttrc
     ~/.muttrc.private: muttrc.private
     ~/.notmuch-config: notmuch-config
-    ~/.offlineimap: offlineimap.private/
-    ~/.offlineimaprc: offlineimaprc.private
     ~/.pandoc: pandoc/
+    ~/powerline: powerline/
     ~/.signature: signatures.private/personal.txt
     ~/.signature.ascm: signatures/ascm.txt
     ~/.task: task.private/
     ~/.taskrc: taskrc
     ~/.tigrc: tigrc
     ~/.timewarrior/timewarrior.cfg: timewarrior.cfg
+    ~/.tmux.conf: tmux.conf
     ~/.todo: todo.private/
     ~/.vim: vim
     ~/.vimrc: vimrc
