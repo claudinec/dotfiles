@@ -14,15 +14,14 @@ compinit
 # Perl local::lib
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
 
-
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
 # Antigen
-source /usr/share/zsh-antigen/antigen.zsh
-antigen use oh-my-zsh
+source /usr/local/share/antigen/antigen.zsh
+antigen use ohmyzsh/ohmyzsh
 antigen bundle agkozak/zsh-z
-antigen bundle andrewferrier/fzf-z
 antigen theme candy
 antigen apply
+
 
