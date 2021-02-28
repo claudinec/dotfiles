@@ -1,5 +1,5 @@
 #-- START ZCACHE GENERATED FILE
-#-- GENERATED: Sun 28 Feb 2021 19:35:18 AEDT
+#-- GENERATED: Sun 28 Feb 2021 19:40:33 AEDT
 #-- ANTIGEN v2.2.3
 _antigen () {
 	local -a _1st_arguments
@@ -53,9 +53,9 @@ source '/Users/claudine/dotfiles/antigen/bundles/agkozak/zsh-z/zsh-z.plugin.zsh'
 source '/Users/claudine/dotfiles/antigen/bundles/ohmyzsh/ohmyzsh/themes/candy.zsh-theme.antigen-compat';
 
 #--- BUNDLES END
-typeset -gaU _ANTIGEN_BUNDLE_RECORD; _ANTIGEN_BUNDLE_RECORD=('https://github.com/ohmyzsh/ohmyzsh.git / plugin true' 'https://github.com/agkozak/zsh-z.git / plugin true' 'https://github.com/ohmyzsh/ohmyzsh.git themes/candy.zsh-theme theme true')
+typeset -gaU _ANTIGEN_BUNDLE_RECORD; _ANTIGEN_BUNDLE_RECORD=('https://github.com/ohmyzsh/ohmyzsh.git / plugin true' 'https://github.com/agkozak/zsh-z.git / plugin true' 'https://github.com/ohmyzsh/ohmyzsh.git git plugin true' 'https://github.com/ohmyzsh/ohmyzsh.git themes/candy.zsh-theme theme true')
 typeset -g _ANTIGEN_CACHE_LOADED; _ANTIGEN_CACHE_LOADED=true
-typeset -ga _ZCACHE_BUNDLE_SOURCE; _ZCACHE_BUNDLE_SOURCE=('/Users/claudine/.antigen/bundles/ohmyzsh/ohmyzsh//' '/Users/claudine/.antigen/bundles/ohmyzsh/ohmyzsh///oh-my-zsh.sh' '/Users/claudine/.antigen/bundles/agkozak/zsh-z//' '/Users/claudine/.antigen/bundles/agkozak/zsh-z///zsh-z.plugin.zsh' '/Users/claudine/.antigen/bundles/ohmyzsh/ohmyzsh/themes/candy.zsh-theme' '/Users/claudine/.antigen/bundles/ohmyzsh/ohmyzsh/themes/candy.zsh-theme')
+typeset -ga _ZCACHE_BUNDLE_SOURCE; _ZCACHE_BUNDLE_SOURCE=('/Users/claudine/.antigen/bundles/ohmyzsh/ohmyzsh//' '/Users/claudine/.antigen/bundles/ohmyzsh/ohmyzsh///oh-my-zsh.sh' '/Users/claudine/.antigen/bundles/agkozak/zsh-z//' '/Users/claudine/.antigen/bundles/agkozak/zsh-z///zsh-z.plugin.zsh' '/Users/claudine/.antigen/bundles/ohmyzsh/ohmyzsh/git' '/Users/claudine/.antigen/bundles/ohmyzsh/ohmyzsh/themes/candy.zsh-theme' '/Users/claudine/.antigen/bundles/ohmyzsh/ohmyzsh/themes/candy.zsh-theme')
 typeset -g _ANTIGEN_CACHE_VERSION; _ANTIGEN_CACHE_VERSION='v2.2.3'
 
 #-- END ZCACHE GENERATED FILE
