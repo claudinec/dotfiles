@@ -21,6 +21,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 source /usr/local/share/antigen/antigen.zsh
 antigen use ohmyzsh/ohmyzsh
 antigen bundle agkozak/zsh-z
+antigen bundle git
 antigen theme candy
 antigen apply
 
@@ -51,15 +52,15 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git git-flow gpg-agent history osx taskwarrior vi-mode web-search)
+# plugins=(brew git git-flow gpg-agent history osx taskwarrior vi-mode web-search)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:$HOME/.composer/vendor/bin:/usr/local/texlive/2020/bin/x86_64-darwin:/usr/local/sbin:$PATH
-export MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:/usr/local/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH
+# export PATH=$HOME/bin:$HOME/.composer/vendor/bin:/usr/local/texlive/2020/bin/x86_64-darwin:/usr/local/sbin:$PATH
+# export MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:/usr/local/man:$MANPATH
+# export INFOPATH=/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH
 
 ### Other
 
@@ -177,6 +178,18 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
