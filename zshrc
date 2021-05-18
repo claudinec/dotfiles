@@ -175,4 +175,5 @@ fi
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-export PATH="/usr/local/sbin:$PATH"
+
+export PATH="/usr/local/sbin:/Users/claudine/Library/Python/3.9/bin:/Users/claudine/.composer/vendor/bin:$PATH"
