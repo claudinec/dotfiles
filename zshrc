@@ -72,7 +72,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -105,9 +105,9 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Private configuration.
 source ~/.zshrc.private
 
+
 # vi keys
 bindkey -v
-
 
 # iterm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
