@@ -1,6 +1,7 @@
 - clean: ['~']
 - link:
     ~/.antigen: antigen/
+    ~/.config/redshift: redshift/
     ~/.config/s: s/
     ~/.gnupg: gnupg.private/
     ~/.gvimrc: gvimrc
