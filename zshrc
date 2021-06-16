@@ -70,7 +70,7 @@ ZSH_THEME="dst"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(command-not-found common-aliases debian fzf git sudo vi-mode web-search z)
+plugins=(command-not-found common-aliases debian fzf git vi-mode web-search z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,7 +79,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_AU.UTF-8
+export LC_ALL=en_AU.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
