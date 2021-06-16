@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(command-not-found common-aliases fzf git sudo vi-mode z)
+plugins=(command-not-found common-aliases debian fzf git sudo vi-mode web-search z)
 
 source $ZSH/oh-my-zsh.sh
 
