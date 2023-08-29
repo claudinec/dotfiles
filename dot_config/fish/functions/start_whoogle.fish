@@ -10,7 +10,10 @@ function start_whoogle
         set -gx WHOOGLE_CONFIG_ALTS 1
         set -gx WHOOGLE_ALT_WIKI ""
         set -g whoogle_port 5100
-        set -g whoogle_host "$hostname.dojo-hamlet.ts.net"
+        if test -z "$tailnet_name"
+            set -g tailnet_name dojo-hamlet.ts.net
+        end
+        set -g whoogle_host "$hostname.$tailnet_name"
         if test "$argv[1]" = "debug"
             whoogle-search --debug --port "$whoogle_port" --host "$whoogle_host" &
         else
