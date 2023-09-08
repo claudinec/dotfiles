@@ -3,7 +3,11 @@
 {{- $codespaces:= env "CODESPACES" | not | not -}}
 sourceDir: {{ .chezmoi.sourceDir | quote }}
 
+encryption: "gpg"
+gpg:
+    symmetric: true
+
 data:
-    name: "Claudine Chionh"
     codespaces: {{ $codespaces }}
-    email: "info@claudinec.net"
+    name: "Claudine Chionh"
+    gitEmail: "info@claudinec.net"
