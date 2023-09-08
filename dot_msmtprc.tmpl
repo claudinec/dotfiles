@@ -9,7 +9,7 @@
 defaults
 
 # Use the mail submission port 587 instead of the SMTP port 25.
-port 587
+port {{ .smtpPort }}
 
 # Always use TLS.
 tls on
@@ -24,10 +24,10 @@ tls on
 
 
 # Account name
-account {{ $emailAccount }}
+account {{ .emailAccount }}
 
 # Host name of the SMTP server
-host {{ $smtpHost }}
+host {{ .smtpHost }}
 
 # As an alternative to tls_trust_file/tls_crl_file, you can use tls_fingerprint
 # to pin a single certificate. You have to update the fingerprint when the
@@ -37,11 +37,11 @@ host {{ $smtpHost }}
 #tls_fingerprint 00:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD:EE:FF:00:11:22:33
 
 # Envelope-from address
-from {{ $emailFrom }}
+from {{ .emailFrom }}
 
 # Authentication. The password is given using one of five methods, see below.
 auth on
-user {{ $emailLogin }}
+user {{ .emailLogin }}
 
 # Password method 1: Add the password to the system keyring, and let msmtp get
 # it automatically. To set the keyring password using Gnome's libsecret:
@@ -69,4 +69,4 @@ user {{ $emailLogin }}
 
 
 # Set a default account
-account default : fastmail
+account default : {{ .emailAccount }}
