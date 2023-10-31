@@ -1,0 +1,20 @@
+# ~/.config/beets/config.yaml
+
+# directory: /Volumes/MangoX1Data/Music/beets-library
+directory: /Volumes/MangoX1Data/share/jellyfin/media/music
+library: ~/.config/beets/library.db
+plugins: duplicates missing parentwork embedart fetchart mbsync discogs bandcamp lastimport play web random
+ui:
+    color: yes
+import:
+    move: yes
+    log: ~/Library/Logs/beets/beets.log
+    languages: en fr de id ms gr ru
+    bell: yes
+match:
+    preferred:
+        countries: ['AU', 'GB|UK', 'US']
+play:
+    command: /Applications/VLC.app/Contents/MacOS/VLC
+lastfm:
+    user: claudinec
