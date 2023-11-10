@@ -5,6 +5,18 @@ compress
 missingok
 notifempty
 
+"{{ .logDir }}/logrotate/*.log" {
+  rotate 30
+  daily
+}
+
+"{{ .logDir }}/rclone/*.log" {
+  rotate 30
+  daily
+  maxage 90
+  delaycompress
+}
+
 {{ if eq .chezmoi.os "darwin" -}}
 "~/Library/Logs/beets/*.log" {
   rotate 30
@@ -20,30 +32,3 @@ notifempty
   rotate 12
   weekly
 }
-
-"~/Library/Logs/logrotate/*.log" {
-  rotate 30
-  daily
-}
-
-"~/Library/Logs/rclone/*.log" {
-  rotate 30
-  daily
-  maxage 90
-  delaycompress
-}
-{{- end }}
-
-{{ if eq .chezmoi.os "linux" -}}
-"~/.local/state/logs/logrotate/*.log" {
-  rotate 30
-  daily
-}
-
-"~/.local/state/logs/rclone/*.log" {
-  rotate 30
-  daily
-  maxage 90
-  delaycompress
-}
-{{- end }}
