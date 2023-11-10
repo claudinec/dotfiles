@@ -11,3 +11,8 @@ data:
     codespaces: {{ $codespaces }}
     name: "Claudine Chionh"
     gitEmail: "info@claudinec.net"
+    {{ if eq .chezmoi.os "darwin" -}}
+    logDir: "~/Library/Logs"
+    {{ else -}}
+    logDir: "~/.local/state/logs"
+    {{- end }}
