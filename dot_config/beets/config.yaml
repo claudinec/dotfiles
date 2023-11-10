@@ -14,7 +14,11 @@ import:
 match:
     preferred:
         countries: ['AU', 'GB|UK', 'US']
+
+{{ if eq .chezmoi.os "darwin" -}}
 play:
     command: /Applications/VLC.app/Contents/MacOS/VLC
+{{- end }}
+
 lastfm:
     user: claudinec
