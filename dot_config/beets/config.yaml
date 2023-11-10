@@ -1,14 +1,14 @@
 # ~/.config/beets/config.yaml
+# https://beets.readthedocs.io/en/stable/reference/config.html
 
-# directory: /Volumes/MangoX1Data/Music/beets-library
-directory: /Volumes/MangoX1Data/share/jellyfin/media/music
+directory: ~/Music/beets
 library: ~/.config/beets/library.db
 plugins: duplicates missing parentwork embedart fetchart mbsync discogs bandcamp lastimport play web random
 ui:
     color: yes
 import:
     move: yes
-    log: ~/Library/Logs/beets/beets.log
+    log: {{ .logDir }}/beets/beets.log
     languages: en fr de id ms gr ru
     bell: yes
 match:
