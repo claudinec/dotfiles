@@ -13,6 +13,9 @@ data:
     gitEmail: "info@claudinec.net"
     {{ if eq .chezmoi.os "darwin" -}}
     logDir: "~/Library/Logs"
+    videoDir: "~/Movies"
     {{ else -}}
     logDir: "~/.local/state/logs"
+    videoDir: "~/Videos"
     {{- end }}
+
