@@ -1,0 +1,28 @@
+# yt-dlp command-line options
+# https://github.com/yt-dlp/yt-dlp#usage-and-options
+
+## download management
+
+--download-archive "{{ .videoDir }}/yt-dlp-archive.txt"
+--max-downloads 25
+
+## output
+
+--console-title
+--prefer-free-formats
+--restrict-filenames
+
+--paths "{{ .videoDir }}"
+--output "%(channel)s/%(upload_date)s-%(uploader)s-%(title)s-%(id)s.%(ext)s"
+
+## subtitles
+
+--write-subs
+--write-auto-subs
+--sub-langs "en"
+
+## account-related
+
+--cookies-from-browser vivaldi
+--mark-watched
+
