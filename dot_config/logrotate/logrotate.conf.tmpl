@@ -4,6 +4,7 @@ maxsize 256K
 compress
 missingok
 notifempty
+mail {{ .emailFrom }}
 
 "{{ .logDir }}/logrotate/*.log" {
   rotate 30
