@@ -15,5 +15,8 @@ if status is-interactive
         fish_add_path /opt/homebrew/bin /opt/homebrew/sbin
         pyenv init - | source
         abbr --add tailscale /Applications/Tailscale.app/Contents/MacOS/Tailscale
+        if not test -e $HOME/bin/keyboardmaestro
+            ln -s "/Applications/Keyboard Maestro.app/Contents/MacOS/keyboardmaestro" $HOME/bin/keyboardmaestro
+        end
     end
 end
