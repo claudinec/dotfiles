@@ -3,15 +3,17 @@
 
 ## download management
 
+--console-title
 --download-archive "{{ .videoDir }}/yt-dlp-archive.txt"
 --max-downloads 8
 
 ## output
 
---console-title
 --prefer-free-formats
 --restrict-filenames
+--embed-metadata
 --write-thumbnail
+--embed-thumbnail
 
 --paths "{{ .videoDir }}"
 --output "%(channel)s/%(upload_date)s-%(uploader)s-%(title)s-%(id)s.%(ext)s"
@@ -21,6 +23,7 @@
 --write-subs
 --write-auto-subs
 --sub-langs "en.*,fr"
+--embed-subs
 
 ## account-related
 
