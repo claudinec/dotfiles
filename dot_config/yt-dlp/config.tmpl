@@ -9,14 +9,15 @@
 
 ## output
 
+--paths "{{ .videoDir }}"
+--output "%(channel)s/%(upload_date)s-%(uploader)s-%(title)s-%(id)s.%(ext)s"
+
 --prefer-free-formats
 --restrict-filenames
 --embed-metadata
 --write-thumbnail
 --embed-thumbnail
-
---paths "{{ .videoDir }}"
---output "%(channel)s/%(upload_date)s-%(uploader)s-%(title)s-%(id)s.%(ext)s"
+--sponsorblock-mark all
 
 ## subtitles
 
