@@ -21,6 +21,8 @@ auth on
 user {{ .msmtpLogin }}
 {{ if eq .chezmoi.os "darwin" -}}
 password {{ onepasswordRead .msmtpOnepasswordUrl }}
+{{- else }}
+password {{ joinPath .chezmoi.sourceDir "encrypted_dot_msmtp-password.txt.asc" | include | decrypt }}
 {{- end }}
 
 # Set a default account
