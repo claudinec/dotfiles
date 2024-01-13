@@ -15,7 +15,6 @@ mail {{ .emailFrom }}
   rotate 30
   daily
   maxage 90
-  delaycompress
 }
 
 {{ if eq .chezmoi.os "darwin" -}}
