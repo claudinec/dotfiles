@@ -1,0 +1,118 @@
+" pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+syntax on
+filetype plugin on
+Helptags
+
+"""" core options
+
+colorscheme catppuccin_macchiato
+"""" OS appearance -> colour scheme
+" 0 = light mode or non-MacVim
+" 1 = dark mode
+" if v:os_appearance == 1
+"     colorscheme catppuccin_macchiato
+" else
+"      colorscheme catppuccin_latte
+" endif
+
+set autoread
+set autoindent
+
+set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+" set backup
+
+set cindent
+set completeopt=menu,longest,preview
+set confirm
+
+set dir=~/tmp
+
+set encoding=utf-8
+set expandtab
+
+set hid             " allow switching buffers, which have unsaved changes
+set history=50      " keep 50 lines of command line history
+
+set ignorecase      " ignore case
+set incsearch       " do incremental searching
+
+" set mouse=a       " use mouse in xterm to scroll
+
+set nocompatible
+set number          " line numbers
+
+set omnifunc=syntaxcomplete#Complete  " omni completion
+
+set ruler           " show the cursor position all the time
+
+set scrolloff=5     " 5 lines before and after the current line when scrolling
+set shiftwidth=4
+set showcmd         " display incomplete commands
+set showmatch       " showmatch: Show the matching bracket for the last ')'?
+set smartcase       " don't ignore case, when search string contains uppercase letters
+set smartindent
+
+set tabstop=4
+set termguicolors
+set textwidth=72
+
+set writebackup
+
+" statusline
+set laststatus=2
+set statusline+=%{wordCount#WordCount()}
+
+"""" Airline
+" let g:airline_theme='base16_tomorrow_night'
+let g:airline_theme = 'catppuccin_mocha'
+
+" NERDTree
+let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
+let NERDTreeSortHiddenFirst=1
+let NERDTreeChDirMode=2
+let NERDTreeWinSize=40
+" How can I open NERDTree automatically when vim starts up on opening a directory?
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+" EasyAlign
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+" xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+" nmap ga <Plug>(EasyAlign)
+
+" Startify
+let g:startify_bookmarks = [  {'g': '~/.gvimrc'},   {'v': '~/.vimrc'}, {'z': '~/.zshrc'} ]
+let g:startify_files_number = 5
+
+" The command to get weather conditions is
+" curl \"https://wttr.in/Melbourne?0QT\" > $HOME/.local/share/wttr.txt
+if filereadable(expand('~/.local/share/wttr.txt'))
+    let wttr = readfile(glob('~/.local/share/wttr.txt'))
+    let g:startify_custom_header = wttr
+else
+    let g:startify_custom_header = startify#fortune#boxed()
+endif
+
+"""" FZF
+" TODO platform-specific
+" set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/bin/fzf
+
+" statusline
+set laststatus=2
+set statusline+=%{wordCount#WordCount()}
+
+"""" RBQL
+let g:rbql_with_headers = 1
+
+"""" table-mode
+let g:table_mode_auto_align = 1
+" let g:table_mode_corner='+'
+" let g:table_mode_corner_corner='+'
+" let g:table_mode_header_fillchar='='
+

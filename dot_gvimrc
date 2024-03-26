@@ -1,0 +1,5 @@
+set columns=144
+set lines=44
+set guifont=FiraCode_Nerd_Font:h13,Fira_Code:h13
+set macligatures
+
