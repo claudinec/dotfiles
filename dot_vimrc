@@ -103,12 +103,15 @@ endif
 " set rtp+=/usr/local/opt/fzf
 set rtp+=/opt/homebrew/bin/fzf
 
-" statusline
-set laststatus=2
-set statusline+=%{wordCount#WordCount()}
+"""" ledger
+let g:ledger_is_hledger = v:true
 
 """" RBQL
 let g:rbql_with_headers = 1
+
+" statusline
+set laststatus=2
+set statusline+=%{wordCount#WordCount()}
 
 """" table-mode
 let g:table_mode_auto_align = 1
