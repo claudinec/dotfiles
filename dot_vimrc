@@ -86,7 +86,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " nmap ga <Plug>(EasyAlign)
 
 " Startify
-let g:startify_bookmarks = [  {'g': '~/.gvimrc'},   {'v': '~/.vimrc'}, {'z': '~/.zshrc'} ]
+let g:startify_bookmarks = [  {'g': '~/.gvimrc'},   {'v': '~/.vimrc'} }
 let g:startify_files_number = 5
 
 " The command to get weather conditions is
