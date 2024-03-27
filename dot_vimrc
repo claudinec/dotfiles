@@ -61,12 +61,12 @@ set textwidth=72
 set writebackup
 
 " statusline
-set laststatus=2
-set statusline+=%{wordCount#WordCount()}
+" set laststatus=2
+" set statusline+=%{wordCount#WordCount()}
 
 """" Airline
 " let g:airline_theme='base16_tomorrow_night'
-let g:airline_theme = 'catppuccin_mocha'
+" let g:airline_theme = 'catppuccin_mocha'
 
 " NERDTree
 let NERDTreeShowBookmarks=1
@@ -86,7 +86,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " nmap ga <Plug>(EasyAlign)
 
 " Startify
-let g:startify_bookmarks = [  {'g': '~/.gvimrc'},   {'v': '~/.vimrc'} }
+let g:startify_bookmarks = [  {'f': '~/.local/share/chezmoi/dot_config/fish/config.fish'}, {'g': '~/.local/share/chezmoi/dot_gvimrc'},  {'v': '~/.local/share/chezmoi/dot_vimrc'} }
 let g:startify_files_number = 5
 
 " The command to get weather conditions is
@@ -109,13 +109,8 @@ let g:ledger_is_hledger = v:true
 """" RBQL
 let g:rbql_with_headers = 1
 
-" statusline
-set laststatus=2
-set statusline+=%{wordCount#WordCount()}
-
 """" table-mode
 let g:table_mode_auto_align = 1
 " let g:table_mode_corner='+'
 " let g:table_mode_corner_corner='+'
 " let g:table_mode_header_fillchar='='
-
