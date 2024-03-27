@@ -1,6 +1,11 @@
 # docs: https://www.chezmoi.io/reference/special-files-and-directories/chezmoiexternal-format/
 # examples: https://www.chezmoi.io/user-guide/include-files-from-elsewhere/
 
+".irssi/themes":
+    type: "git-repo"
+    url: "git@github.com:irssi-import/themes.git"
+    refreshPeriod: "168h"
+
 ".vim/autoload/pathogen.vim":
     type: "file"
     url: "https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim"
