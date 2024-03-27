@@ -86,7 +86,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " nmap ga <Plug>(EasyAlign)
 
 " Startify
-let g:startify_bookmarks = [  {'f': '~/.local/share/chezmoi/dot_config/fish/config.fish'}, {'g': '~/.local/share/chezmoi/dot_gvimrc'},  {'v': '~/.local/share/chezmoi/dot_vimrc'} }
+let g:startify_bookmarks = [ {'f': '~/.local/share/chezmoi/dot_config/fish/config.fish'}, {'g': '~/.local/share/chezmoi/dot_gvimrc'}, {'v': '~/.local/share/chezmoi/dot_vimrc'} ]
 let g:startify_files_number = 5
 
 " The command to get weather conditions is
