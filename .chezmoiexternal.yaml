@@ -16,6 +16,11 @@
     url: "git@github.com:catppuccin/vim.git"
     refreshPeriod: "168h"
 
+".vim/bundle/ctrlp":
+    type: "git-repo"
+    url: "git@github.com:ctrlpvim/ctrlp.vim.git"
+    refreshPeriod: "168h"
+
 ".vim/bundle/fzf":
     type: "git-repo"
     url: "git@github.com:junegunn/fzf.git"
