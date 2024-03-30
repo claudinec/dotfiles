@@ -7,15 +7,15 @@ Helptags
 
 """" core options
 
-colorscheme catppuccin_macchiato
+" colorscheme catppuccin_macchiato
 """" OS appearance -> colour scheme
 " 0 = light mode or non-MacVim
 " 1 = dark mode
-" if v:os_appearance == 1
-"     colorscheme catppuccin_macchiato
-" else
-"      colorscheme catppuccin_latte
-" endif
+if v:os_appearance == 1
+    colorscheme catppuccin_macchiato
+else
+    colorscheme catppuccin_latte
+endif
 
 set autoread
 set autoindent
