@@ -50,3 +50,9 @@
     type: "git-repo"
     url: "git@github.com:dhruvasagar/vim-table-mode.git"
     refreshPeriod: "168h"
+
+".vim/bundle/vimwiki":
+    type: "git-repo"
+    url: "git@github.com:vimwiki/vimwiki.git"
+    refreshPeriod: "168h"
+
