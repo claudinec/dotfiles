@@ -87,7 +87,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 
 " Startify
 let g:startify_bookmarks = [ {'f': '~/.local/share/chezmoi/dot_config/fish/config.fish'}, {'g': '~/.local/share/chezmoi/dot_gvimrc.tmpl'}, {'v': '~/.local/share/chezmoi/dot_vimrc'} ]
-let g:startify_files_number = 5
+let g:startify_files_number = 8
 
 " The command to get weather conditions is
 " curl \"https://wttr.in/Melbourne?0QT\" > $HOME/.local/share/wttr.txt
