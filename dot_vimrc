@@ -38,6 +38,8 @@ set history=50      " keep 50 lines of command line history
 set ignorecase      " ignore case
 set incsearch       " do incremental searching
 
+set linebreak
+
 " set mouse=a       " use mouse in xterm to scroll
 
 set nocompatible
@@ -115,3 +117,6 @@ let g:table_mode_auto_align = 1
 " let g:table_mode_corner='+'
 " let g:table_mode_corner_corner='+'
 " let g:table_mode_header_fillchar='='
+
+"""" vimwiki
+let g:vimwiki_ext2syntax = {'.mediawiki': 'media'}
