@@ -89,7 +89,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " nmap ga <Plug>(EasyAlign)
 
 " Startify
-let g:startify_bookmarks = [ {'f': '~/.local/share/chezmoi/dot_config/fish/config.fish'}, {'g': '~/.local/share/chezmoi/dot_gvimrc.tmpl'}, {'v': '~/.local/share/chezmoi/dot_vimrc.tmpl'} ]
+let g:startify_bookmarks = [ {'f': '~/.local/share/chezmoi/dot_config/fish/config.fish'}, {'g': '~/.local/share/chezmoi/dot_gvimrc.tmpl'}, {'v': '~/.local/share/chezmoi/private_dot_vimrc.tmpl'} ]
 let g:startify_files_number = 8
 
 " The command to get weather conditions is
@@ -124,4 +124,7 @@ let g:table_mode_auto_align = 1
 """" vimwiki
 let g:vimwiki_ext2syntax = {'.mediawiki': 'media'}
 let g:vimwiki_list = [{'path': '~/private/vimwiki', 'links_space_char': '_', 'syntax': 'default', 'ext': '.wiki'}]
+{{ if eq .chezmoi.os "darwin" -}}
+call extend(g:vimwiki_list, [{'path': '~/Documents/311-AQuA_ef/Files', 'name':'AQuA', 'links_space_char': '_', 'syntax': 'default', 'ext': '.vimwiki', 'index': '311.00.00-index'}])
+{{- end }}
 
