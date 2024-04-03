@@ -1,3 +1,4 @@
+" vim: set filetype=vim:
 " pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
@@ -88,7 +89,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " nmap ga <Plug>(EasyAlign)
 
 " Startify
-let g:startify_bookmarks = [ {'f': '~/.local/share/chezmoi/dot_config/fish/config.fish'}, {'g': '~/.local/share/chezmoi/dot_gvimrc.tmpl'}, {'v': '~/.local/share/chezmoi/dot_vimrc'} ]
+let g:startify_bookmarks = [ {'f': '~/.local/share/chezmoi/dot_config/fish/config.fish'}, {'g': '~/.local/share/chezmoi/dot_gvimrc.tmpl'}, {'v': '~/.local/share/chezmoi/dot_vimrc.tmpl'} ]
 let g:startify_files_number = 8
 
 " The command to get weather conditions is
@@ -101,9 +102,11 @@ else
 endif
 
 """" FZF
-" TODO platform-specific
-" set rtp+=/usr/local/opt/fzf
+{{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") ) -}}
 set rtp+=/opt/homebrew/bin/fzf
+{{- else }}
+set rtp+=/usr/bin/fzf
+{{- end }}
 
 """" ledger
 let g:ledger_bin = 'hledger'
