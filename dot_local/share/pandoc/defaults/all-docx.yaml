@@ -1,0 +1,3 @@
+defaults:
+- all
+reference-doc: ${USERDATA}/docx/reference.docx

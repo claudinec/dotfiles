@@ -1,0 +1,3 @@
+# Shift headings for report to be included in meeting agenda.
+defaults: aqua
+shift-heading-level-by: 2

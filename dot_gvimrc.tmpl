@@ -1,0 +1,8 @@
+" vim: set filetype=vim:
+set columns={{ .gvimColumns }}
+set lines={{ .gvimLines }}
+set guifont=FiraCode_Nerd_Font:h13,Fira_Code:h13
+{{ if eq .chezmoi.os "darwin" -}}
+set macligatures
+{{- end }}
+

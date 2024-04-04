@@ -1,5 +1,7 @@
-{{/* codespaces config copied from: */}}
-{{/* https://www.chezmoi.io/user-guide/machines/containers-and-vms/ */}}
+# docs: https://www.chezmoi.io/reference/configuration-file/
+
+# codespaces config copied from:
+# https://www.chezmoi.io/user-guide/machines/containers-and-vms/
 {{- $codespaces:= env "CODESPACES" | not | not -}}
 sourceDir: {{ .chezmoi.sourceDir | quote }}
 
@@ -18,4 +20,3 @@ data:
     logDir: "~/.local/state/logs"
     videoDir: "~/Videos"
     {{- end }}
-
