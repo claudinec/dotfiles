@@ -18,5 +18,7 @@ data:
     videoDir: "~/Movies"
     {{ else -}}
     logDir: "~/.local/state/logs"
+    {{ if ne .chezmoi.fqdnHostname "claudinec.nfshost.com" -}}
     videoDir: "~/Videos"
+    {{- end }}
     {{- end }}

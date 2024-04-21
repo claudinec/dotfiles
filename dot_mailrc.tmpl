@@ -1,5 +1,7 @@
 {{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") ) -}}
 set sendmail="/opt/homebrew/bin/msmtp"
+{{- else if eq .chezmoi.fqdnHostname "claudinec.nfshost.com" }}
+set sendmail="/usr/bin/sendmail"
 {{- else }}
 set sendmail="/usr/bin/msmtp"
 {{- end }}

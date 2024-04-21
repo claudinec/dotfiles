@@ -1,3 +1,5 @@
 keyserver hkps://keys.openpgp.org
-default-key {{ .gpgDefaultKey }}
 no-emit-version
+{{ if ne .chezmoi.fqdnHostname "claudinec.nfshost.com" -}}
+default-key {{ .gpgDefaultKey }}
+{{- end }}
