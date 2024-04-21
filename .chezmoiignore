@@ -5,6 +5,7 @@ install.sh
 .gvimrc
 {{- end }}
 {{- if eq .chezmoi.fqdnHostname "claudinec.nfshost.com" }}
+.config/beets/config
 .config/yt-dlp/config
 .msmtprc
 {{- end }}
