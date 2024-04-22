@@ -28,7 +28,11 @@ set cindent
 set completeopt=menu,longest,preview
 set confirm
 
+{{ if eq .chezmoi.fqdnHostname "claudinec.nfshost.com" -}}
+set dir=/home/tmp
+{{- else }}
 set dir=~/tmp
+{{- end }}
 
 set encoding=utf-8
 set expandtab
