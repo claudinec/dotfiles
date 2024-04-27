@@ -2,10 +2,10 @@ if status is-interactive
     fish_vi_key_bindings
 
     # set program-specific editors
-    {{ if eq .chezmoi.fqdnHostname "claudinec.nfshost.com" -}}
-    set -gx GIT_EDITOR vim
-    {{- else }}
+    {{ if eq .chezmoi.os "darwin" -}}
     set -gx GIT_EDITOR gvim --nofork
+    {{- else }}
+    set -gx GIT_EDITOR vim
     {{- end }}
     set -gx HLEDGER_UI_EDITOR gvim
 
