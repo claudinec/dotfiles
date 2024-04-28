@@ -1,0 +1,6 @@
+.DS_Store
+*.env
+*.swp
+*.~undo-tree~
+
+.ipynb_checkpoints/
