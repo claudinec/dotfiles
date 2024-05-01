@@ -41,6 +41,11 @@
     url: "git@github.com:mechatroner/rainbow_csv.git"
     refreshPeriod: "168h"
 
+".vim/bundle/vim-devicons":
+    type: "git-repo"
+    url: "git@github.com:ryanoasis/vim-devicons.git"
+    refreshPeriod: "672h"
+
 ".vim/bundle/vim-fugitive":
     type: "git-repo"
     url: "git@github.com:tpope/vim-fugitive.git"
