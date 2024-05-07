@@ -1,10 +1,7 @@
 # docs: https://www.chezmoi.io/reference/special-files-and-directories/chezmoiexternal-format/
 # examples: https://www.chezmoi.io/user-guide/include-files-from-elsewhere/
 
-".irssi/themes":
-    type: "git-repo"
-    url: "git@github.com:irssi-import/themes.git"
-    refreshPeriod: "168h"
+#### Vim essentials
 
 ".vim/autoload/pathogen.vim":
     type: "file"
@@ -31,6 +28,19 @@
     url: "git@github.com:junegunn/fzf.git"
     refreshPeriod: "168h"
 
+".vim/bundle/vim-fugitive":
+    type: "git-repo"
+    url: "git@github.com:tpope/vim-fugitive.git"
+    refreshPeriod: "168h"
+
+".vim/bundle/vim-table-mode":
+    type: "git-repo"
+    url: "git@github.com:dhruvasagar/vim-table-mode.git"
+    refreshPeriod: "168h"
+
+{{ if ne .chezmoi.fqdnHostname "claudinec.nfshost.com" -}}
+#### Vim extras
+
 ".vim/bundle/nerdtree":
     type: "git-repo"
     url: "git@github.com:preservim/nerdtree.git"
@@ -46,11 +56,6 @@
     url: "git@github.com:ryanoasis/vim-devicons.git"
     refreshPeriod: "672h"
 
-".vim/bundle/vim-fugitive":
-    type: "git-repo"
-    url: "git@github.com:tpope/vim-fugitive.git"
-    refreshPeriod: "168h"
-
 ".vim/bundle/vim-ledger":
     type: "git-repo"
     url: "git@github.com:ledger/vim-ledger.git"
@@ -61,13 +66,16 @@
     url: "git@github.com:mhinz/vim-startify.git"
     refreshPeriod: "168h"
 
-".vim/bundle/vim-table-mode":
-    type: "git-repo"
-    url: "git@github.com:dhruvasagar/vim-table-mode.git"
-    refreshPeriod: "168h"
-
 ".vim/bundle/vimwiki":
     type: "git-repo"
     url: "git@github.com:vimwiki/vimwiki.git"
     refreshPeriod: "168h"
+
+#### irssi
+
+".irssi/themes":
+    type: "git-repo"
+    url: "git@github.com:irssi-import/themes.git"
+    refreshPeriod: "168h"
+{{- end }}
 

@@ -67,15 +67,22 @@ set textwidth=72
 
 set writebackup
 
-" statusline
-" set laststatus=2
-" set statusline+=%{wordCount#WordCount()}
+"""" plugins on all machines
 
-"""" Airline
-" let g:airline_theme='base16_tomorrow_night'
-" let g:airline_theme = 'catppuccin_mocha'
+"" FZF
+{{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") ) -}}
+set rtp+=/opt/homebrew/bin/fzf
+{{- else }}
+set rtp+=/usr/bin/fzf
+{{- end }}
 
-" NERDTree
+"" table-mode
+let g:table_mode_auto_align = 1
+
+{{ if ne .chezmoi.fqdnHostname "claudinec.nfshost.com" -}}
+"""" home only
+
+"" NERDTree
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 let NERDTreeSortHiddenFirst=1
@@ -85,34 +92,14 @@ let NERDTreeWinSize=40
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
-" EasyAlign
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-" xmap ga <Plug>(EasyAlign)
-
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-" nmap ga <Plug>(EasyAlign)
-
-"""" FZF
-{{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") ) -}}
-set rtp+=/opt/homebrew/bin/fzf
-{{- else }}
-set rtp+=/usr/bin/fzf
-{{- end }}
-
-"""" ledger
+"" ledger
 let g:ledger_bin = 'hledger'
 let g:ledger_is_hledger = v:true
 
-"""" RBQL
+"" RBQL
 let g:rbql_with_headers = 1
 
-"""" table-mode
-let g:table_mode_auto_align = 1
-" let g:table_mode_corner='+'
-" let g:table_mode_corner_corner='+'
-" let g:table_mode_header_fillchar='='
-
-"""" vimwiki
+"" vimwiki
 let g:vimwiki_auto_header = 1
 let g:vimwiki_dir_link = 'index'
 let g:vimwiki_emoji_enable = 2
@@ -121,7 +108,7 @@ let g:vimwiki_folding = 'expr'
 let g:vimwiki_toc_header_level = 2
 let g:vimwiki_list = [{'path': '~/Private/vimwiki', 'links_space_char': '_', 'syntax': 'default', 'ext': '.wiki', 'nested_syntaxes': {'markdown': 'markdown', 'sh': 'shell'}, 'auto_tags': 1, 'auto_export': 1}]
 
-"""" Startify
+"" Startify
 let g:startify_bookmarks = [ {'f': '~/.local/share/chezmoi/dot_config/fish/config.fish'}, {'g': '~/.local/share/chezmoi/dot_gvimrc.tmpl'}, {'v': '~/.local/share/chezmoi/private_dot_vimrc.tmpl'}, {'w': '~/Private/vimwiki/index.wiki'} ]
 let g:startify_files_number = 8
 
@@ -133,4 +120,5 @@ if filereadable(expand('~/.local/share/wttr.txt'))
 else
     let g:startify_custom_header = startify#fortune#boxed()
 endif
+{{- end }}
 
