@@ -1,3 +1,5 @@
 defaults:
 - all
+metadata:
+  author: Claudine Chionh
 reference-doc: ${USERDATA}/docx/reference.docx

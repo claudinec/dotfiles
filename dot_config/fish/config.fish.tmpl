@@ -4,10 +4,10 @@ if status is-interactive
     # set program-specific editors
     {{ if eq .chezmoi.os "darwin" -}}
     set -gx GIT_EDITOR gvim --nofork
+    set -gx HLEDGER_UI_EDITOR gvim
     {{- else }}
     set -gx GIT_EDITOR vim
     {{- end }}
-    set -gx HLEDGER_UI_EDITOR gvim
 
     test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 
