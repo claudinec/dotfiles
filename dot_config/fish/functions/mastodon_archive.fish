@@ -10,7 +10,7 @@ function mastodon_archive
             set -f change_dir 0
         end
         set -g mastodon_user claudinec
-        set -g mastodon_domains aus.social fosstodon.org
+        set -g mastodon_domains aus.social
         for domain in $mastodon_domains
             set -l account "$mastodon_user@$domain"
             echo -e "\n#### Fetching archive for $account ####"
