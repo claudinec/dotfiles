@@ -1,0 +1,24 @@
+# powerline
+# %if "#{==:#{host_short},raspberry}"
+# run-shell "powerline-daemon -q"
+# source "/usr/share/powerline/bindings/tmux/powerline.conf"
+# %endif
+
+# iTerm2 integration
+set-option -g set-titles on
+set-option -g set-titles-string "$USER @ #{host} : #{pane_current_command}"
+set-option -g allow-passthrough on
+
+# status line
+%if "#{==:$USER,azureuser}"
+set-option -g status-style "bg=#81a2be"
+%elif "#{&&:#{==:host_short,raspberry},#{==:$USER,pi}}"
+set-option -g status-style "bg=#b294bb"
+%elif "#{&&:#{==:host_short,raspberry},#{==:$USER,claudine}}"
+set-option -g status-style "bg=#8abeb7"
+%else
+set-option -g status-style "bg=#b5bd68"
+%endif
+
+set-option -g status-left "[#{session_name}] $USER @ #{host_short} : #{pane_current_path} $ #{pane_current_command}"
+set-option -g status-right "#{pane_title} %F %R"
