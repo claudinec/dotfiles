@@ -1,0 +1,14 @@
+# exclusions
+- fuse-overlayfs/**
+
+# inclusions for raspberry
++ /etc/**
++ /home/**
++ /usr/**
++ /var/**
+- /media/rx1/backup/**
++ /media/rx1/**
+
+# exclude everything else
+- *
+

@@ -1,0 +1,27 @@
+# inclusions for Mac weekly jobs
+- com.freron.MailMate/**/Bin.mailbox/**
+- com.freron.MailMate/**/Deleted*.mailbox/**
+- com.freron.MailMate/**/Junk*.mailbox/**
+- com.freron.MailMate/**/Spam.mailbox/**
+- com.freron.MailMate/**/Trash.mailbox/**
++ com.freron.MailMate/**
++ .config/**
+- dotfiles/emacs.d/elpa/**
++ dotfiles/**
++ Library/Scripts/**
++ Library/Group Containers/UBF8T346G9.Office/User\ Content.localized/Templates.localized/**
+- .local/share/virtualenvs/**
++ .local/**
++ Photos/**
++ Pictures/**
++ Private/**
++ Projects/**
+- Web/Archives/**
+- Web/Projects/Old/**
++ Web/**
++ Zotero/**
++ archivebox-config/**
++ zotero/**
+
+# exclude everything else
+- *

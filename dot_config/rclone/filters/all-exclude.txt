@@ -1,0 +1,25 @@
+# default exclusion filters
+- ~*
+- .bzEmpty
+- .bzvol/
+- *cache*/**
+- Docker.raw
+- .dropbox/**
+- .dtrash/**
+- .DS_Store
+- *.git/**
+- *.icloud
+- *.localized/**
+- *.mp4
+- *.nobackup/**
+- node_modules/**
+- OneDrive/**
+- *.sock
+- *.sql.gz
+- *.swp
+- .Trash/**
+- Trash/**
+- .Trashes/**
+- Unable to Import/**
+- *.~undo-tree~
+

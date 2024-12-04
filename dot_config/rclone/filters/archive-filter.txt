@@ -1,0 +1,6 @@
+# directories to move to archive/cold storage
++ *Archived*/**
++ MangoArchive/**
+
+# exclude everything else
+- *

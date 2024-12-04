@@ -1,0 +1,9 @@
+# inclusions for Mac monthly jobs
++ Archived/**
++ Movies/**
++ Music/**
++ Web/Archives/**
++ Web/Projects/Old/**
+
+# exclude everything else
+- *

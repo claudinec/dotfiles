@@ -1,0 +1,9 @@
+# inclusions for Mac daily jobs
++ Data/**
++ Documents/**
++ Pictures/**
++ Private/**
++ Projects/**
+
+# exclude everything else
+- *

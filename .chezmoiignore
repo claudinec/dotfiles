@@ -1,6 +1,7 @@
 LICENSE
 README.md
 install.sh
+rclone.conf
 {{- if ne .chezmoi.os "darwin" }}
 .gvimrc
 {{- end }}

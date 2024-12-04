@@ -1,0 +1,6 @@
+# OneDrive AQuA directories
+- "Collection Images/**"
++ /AQuA*/**
+
+# exclude everything else
+- *

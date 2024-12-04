@@ -1,0 +1,14 @@
+# working directories to sync between Documents directory on macs
++ 000-099-Meta/**
++ 100-199-Personal/**
++ 200-299-Learning/**
++ 300-399-Employment/**
++ 500-599-Volunteer/**
++ archivebox/queue.txt
++ Bunches/**
++ Hook/**
+- keyboard-maestro/KMBackup*
++ keyboard-maestro/**
+
+# exclude everything else
+- *

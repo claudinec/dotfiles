@@ -1,0 +1,10 @@
+- CloudDocs/**
+- Library/Caches/**
+- Library/*Containers/**
+- "Library/Saved Application State/**"
+- OneDrive*/**
++ /Library/**
++ /Users/**
+
+- *
+
