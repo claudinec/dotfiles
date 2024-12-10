@@ -1,6 +1,10 @@
 if status is-interactive
     fish_vi_key_bindings
 
+    test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
+
+    set -Ux XDG_CONFIG_HOME $HOME/.config
+
     # set program-specific editors
     {{ if eq .chezmoi.os "darwin" -}}
     set -gx GIT_EDITOR gvim --nofork
@@ -8,8 +12,6 @@ if status is-interactive
     {{- else }}
     set -gx GIT_EDITOR vim
     {{- end }}
-
-    test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 
     # mac only
     if test (uname -s) = Darwin
