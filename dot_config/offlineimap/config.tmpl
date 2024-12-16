@@ -1,0 +1,48 @@
+# Offlineimap configuration {{ .chezmoi.config.mode }}
+
+[general]
+metadata = {{ joinPath .chezmoi.homeDir ".config" "offlineimap" }}
+accounts = {{ .personalEmailAccount }}, {{ .workEmailAccount }}
+
+[Account {{ .personalEmailAccount }}]
+localrepository = LocalFastmail
+remoterepository = RemoteFastmail
+maxage = 60
+
+[Repository Local{{ .personalEmailAccount }}]
+type = Maildir
+localfolders = {{ joinPath .chezmoi.homeDir "Mail" .personalEmailAccount }}
+
+[Repository Remote{{ .personalEmailAccount }}]
+type = IMAP
+remotehost = {{ .personalIMAPHost }}
+remoteuser = {{ .personalEmailLogin }}
+remotepassfile = {{ joinPath .chezmoi.homeDir ".config" "offlineimap" }}{{ .chezmoi.pathSeparator }}.pass.{{ .personalEmailAccount }}
+{{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") ) -}}
+sslcacertfile = /opt/homebrew/etc/ca-certificates/cert.pem
+{{- else }}
+sslcacertfile = OS-DEFAULT
+{{- end }}
+createfolders = False
+
+[Account {{ .workEmailAccount }}]
+localrepository = Local{{ .workEmailAccount }}
+remoterepository = Remote{{ .workEmailAccount }}
+# maxage = 90
+
+[Repository Local{{ .workEmailAccount }}]
+type = Maildir
+localfolders = {{ joinPath .chezmoi.homeDir "Mail" "AQuA" "office" }}
+
+[Repository Remote{{ .workEmailAccount }}]
+type = IMAP
+remotehost = {{ .workIMAPHost }}
+remoteuser = {{ .workEmailAddress }}
+remotepassfile = {{ joinPath .chezmoi.homeDir ".config" "offlineimap" }}{{ .chezmoi.pathSeparator }}.pass.{{ .workEmailAccount }}
+{{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") ) -}}
+sslcacertfile = /opt/homebrew/etc/ca-certificates/cert.pem
+{{- else }}
+sslcacertfile = OS-DEFAULT
+{{- end }}
+createfolders = False
+
