@@ -2,7 +2,11 @@
 
 [general]
 metadata = {{ joinPath .chezmoi.homeDir ".config" "offlineimap" }}
+{{ if .workEmailAccount -}}
 accounts = {{ .personalEmailAccount }}, {{ .workEmailAccount }}
+{{- else }}
+accounts = {{ .personalEmailAccount }}
+{{- end }}
 
 [Account {{ .personalEmailAccount }}]
 localrepository = LocalFastmail
@@ -25,6 +29,7 @@ sslcacertfile = OS-DEFAULT
 {{- end }}
 createfolders = False
 
+{{ if .workEmailAccount -}}
 [Account {{ .workEmailAccount }}]
 localrepository = Local{{ .workEmailAccount }}
 remoterepository = Remote{{ .workEmailAccount }}
@@ -45,4 +50,5 @@ sslcacertfile = /opt/homebrew/etc/ca-certificates/cert.pem
 sslcacertfile = OS-DEFAULT
 {{- end }}
 createfolders = False
+{{- end }}
 
