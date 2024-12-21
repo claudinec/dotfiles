@@ -1,0 +1,14 @@
+# https://jrnl.sh/reference-config-file/
+linewrap: "auto"
+{{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") ) -}}
+editor: "mvim --nofork"
+{{- else }}
+editor: "vim"
+{{- end }}
+
+# https://jrnl.sh/advanced/
+# ~/Private/jrnl is a single git repo
+journals:
+  default: ~/Private/jrnl/default/
+  work: ~/Private/jrnl/work/
+  
