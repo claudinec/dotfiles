@@ -1,0 +1,14 @@
+# https://alot.readthedocs.io/en/latest/configuration/config_options.html
+displayed_headers=From, To, Cc, Bcc, Reply-To, Subject, Date
+editor_cmd = vim
+
+[accounts]
+    [[{{ .personalEmailAccount }}]]
+        realname = {{ .name }}
+        address = {{ .personalEmailAddress }}
+        alias_regexp = .+@claudinec.net
+        sent_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .personalEmailAccount }}{{ .chezmoi.pathSeparator }}Sent
+        draft_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .personalEmailAccount }}{{ .chezmoi.pathSeparator }}Drafts
+        sendmail_command = msmtp --account={{ .personalEmailAccount }} -t
+        message_id_domain = {{ .personalEmailDomain }}
+

@@ -7,3 +7,17 @@ My long-running dotfiles repository built with [dotbot](https://github.com/anish
 [.chezmoi.yaml.tmpl](https://www.chezmoi.io/reference/special-files-and-directories/chezmoi-format-tmpl/) is a chezmoi template to set consistent variables for all machines.
 
 [.chezmoidata.yaml](https://www.chezmoi.io/reference/special-files-and-directories/chezmoidata-format/) sets variables for each machine and is ignored by git.
+
+### Email configuration
+
+For each of `personal` and `work` (prefixes):
+
+- `EmailAccount`
+- `EmailAddress`
+- `EmailDomain`
+- `EmailUser`
+- `IMAPHost`
+- `SMTPHost`
+- `SMTPPort`
+- `SMTPOnepasswordUrl`
+
