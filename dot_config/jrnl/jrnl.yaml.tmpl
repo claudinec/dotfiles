@@ -1,5 +1,6 @@
 # https://jrnl.sh/en/stable/reference-config-file/
 linewrap: "auto"
+timeformat: "%Y-%m-%d %H:%M"
 {{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") ) -}}
 editor: "mvim --nofork"
 {{- else }}
