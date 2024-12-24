@@ -1,11 +1,12 @@
 # https://jrnl.sh/en/stable/reference-config-file/
-version: v4.2
+encrypt: false
 linewrap: auto
 tagsymbols: '#@'
 template: false
 timeformat: '%Y-%m-%d %H:%M'
 default_hour: 12
 default_minute: 0
+highlight: false
 colors:
   body: none
   date: green
@@ -29,6 +30,22 @@ journals:
       date: green
       tags: none
       title: none
+  health:
+    journal: ~/Private/jrnl/health/
+    colors:
+      body: none
+      date: red
+      tags: none
+      title: none
+  reading:
+    journal: ~/Private/jrnl/reading/
+    default_hour: 12
+    default_minute: 0
+    colors:
+      body: none
+      date: blue
+      tags: none
+      title: none
   work:
     journal: ~/Private/jrnl/work/
     default_hour: 9
@@ -38,4 +55,3 @@ journals:
       date: magenta
       tags: none
       title: none
-  
