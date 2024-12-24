@@ -1,21 +1,41 @@
 # https://jrnl.sh/en/stable/reference-config-file/
-linewrap: "auto"
-timeformat: "%Y-%m-%d %H:%M"
+version: v4.2
+linewrap: auto
+tagsymbols: '#@'
+template: false
+timeformat: '%Y-%m-%d %H:%M'
+default_hour: 12
+default_minute: 0
+colors:
+  body: none
+  date: green
+  tags: none
+  title: none
 {{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") ) -}}
-editor: "mvim --nofork"
+editor: mvim --nofork
 {{- else }}
-editor: "vim"
+editor: vim
 {{- end }}
 
 # https://jrnl.sh/en/stable/advanced/#multiple-journal-files
 # ~/Private/jrnl is a single git repo
 journals:
   default:
-    journal: "~/Private/jrnl/default/"
+    journal: ~/Private/jrnl/default/
     default_hour: 12
     default_minute: 0
+    colors:
+      body: none
+      date: green
+      tags: none
+      title: none
   work:
-    journal: "~/Private/jrnl/work/"
+    journal: ~/Private/jrnl/work/
     default_hour: 9
     default_minute: 0
+    colors:
+      body: none
+      date: magenta
+      tags: none
+      title: none
   
