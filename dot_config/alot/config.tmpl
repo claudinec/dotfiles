@@ -1,7 +1,16 @@
 # https://alot.readthedocs.io/en/latest/configuration/config_options.html
-displayed_headers=From, To, Cc, Bcc, Reply-To, Subject, Date
-editor_cmd = vim
+# display
+displayed_headers=From, To, Cc, Bcc, Reply-To, Subject, Date, List-ID, User-Agent, X-Mailer
+prefer_plaintext=true
+tabwidth=4
+timestamp_format=%a %F %R
 
+# compose and reply
+editor_cmd=vim
+auto_replyto_mailinglist=True
+honor_followup_to=True
+
+# https://alot.readthedocs.io/en/latest/configuration/accounts.html
 [accounts]
     [[{{ .personalEmailAccount }}]]
         realname = {{ .name }}
@@ -11,4 +20,5 @@ editor_cmd = vim
         draft_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .personalEmailAccount }}{{ .chezmoi.pathSeparator }}Drafts
         sendmail_command = msmtp --account={{ .personalEmailAccount }} -t
         message_id_domain = {{ .personalEmailDomain }}
+        signature = ~/.local/share/signatures/Personal
 
