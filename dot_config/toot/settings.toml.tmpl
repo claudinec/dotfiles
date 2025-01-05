@@ -1,0 +1,10 @@
+[timeline]
+count = 5
+
+[commands.tui]
+colors = 1
+{{ if eq .chezmoi.os "darwin" -}}
+image_format = "iterm"
+{{- else }}
+image_format = "block"
+{{- end }}
