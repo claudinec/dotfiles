@@ -22,3 +22,15 @@ honor_followup_to=True
         message_id_domain = {{ .personalEmailDomain }}
         signature = ~/.local/share/signatures/Personal
 
+    {{ if .workEmailAccount -}}
+    [[{{ .workEmailAccount }}]]
+        realname = {{ .name }}
+        address = {{ .workEmailAddress }}
+        alias_regexp = .+@claudinec.net
+        sent_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .workEmailDir }}{{ .chezmoi.pathSeparator }}Sent
+        draft_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .workEmailDir }}{{ .chezmoi.pathSeparator }}Drafts
+        sendmail_command = msmtp --account={{ .workEmailAccount }} -t
+        message_id_domain = {{ .workEmailDomain }}
+        signature = ~/.local/share/signatures/AQuAOffice
+    {{- end }}
+

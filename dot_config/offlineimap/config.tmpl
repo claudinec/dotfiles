@@ -36,7 +36,7 @@ remoterepository = Remote{{ .workEmailAccount }}
 
 [Repository Local{{ .workEmailAccount }}]
 type = Maildir
-localfolders = {{ joinPath .chezmoi.homeDir "Mail" "AQuA" "office" }}
+localfolders = {{ joinPath .chezmoi.homeDir "Mail" .workEmailDir }}
 
 [Repository Remote{{ .workEmailAccount }}]
 type = IMAP

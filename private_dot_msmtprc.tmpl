@@ -1,4 +1,4 @@
-# Set default values for all following accounts.
+#### Set default values for all following accounts.
 defaults
 
 # Use the mail submission port 587 instead of the SMTP port 25.
@@ -7,7 +7,7 @@ port {{ .personalSMTPPort }}
 # Always use TLS.
 tls on
 
-# Account name
+#### Account name
 account {{ .personalEmailAccount }}
 
 # Host name of the SMTP server
@@ -25,6 +25,27 @@ password {{ onepasswordRead .personalSMTPOnepasswordUrl }}
 password {{ joinPath .chezmoi.sourceDir "encrypted_dot_msmtp-password.txt.asc" | include | decrypt }}
 {{- end }}
 
-# Set a default account
+{{ if .workEmailAccount -}}
+
+#### Account name
+account {{ .workEmailAccount }}
+
+# Host name of the SMTP server
+host {{ .workSMTPHost }}
+
+# Envelope-from address
+from {{ .workEmailAddress }}
+
+# Authentication. Read password from 1Password (Mac) or gpg-encrypted file (Linux).
+auth on
+user {{ .workEmailLogin }}
+{{ if eq .chezmoi.os "darwin" -}}
+password {{ onepasswordRead .workSMTPOnepasswordUrl }}
+{{- else }}
+password {{ joinPath .chezmoi.sourceDir "encrypted_dot_msmtp-password.txt.asc" | include | decrypt }}
+{{- end }}
+{{- end }}
+
+#### Set a default account
 account default : {{ .personalEmailAccount }}
 
