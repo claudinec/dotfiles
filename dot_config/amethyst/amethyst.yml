@@ -191,6 +191,24 @@ select-wide-layout:
   mod: mod1
   key: f
 
+#### Throw to spaces
+
+throw-space-1:
+  mod: mod
+  key: 1
+
+throw-space-2:
+  mod: mod1
+  key: 2
+
+throw-space-3:
+  mod: mod1
+  key: 3
+
+throw-space-4:
+  mod: mod1
+  key: 4
+
 # Move the currently focused window to the space to the left.
 throw-space-left:
   mod: mod2
