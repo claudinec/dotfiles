@@ -1,9 +1,14 @@
 # https://www.newsboat.org/releases/2.38/docs/newsboat.html#_configuration
 
-# cookies
+# general
+browser "open"
 cookie-cache "~/.local/share/newsboat/cookies.txt"
 
 # NewsBlur
 urls-source "newsblur"
 newsblur-login {{ .newsblurAccount }}
 newsblur-password {{ onepasswordRead .newsblurOnepasswordUrl }}
+
+# colour
+include "~/.local/share/catppuccin/newsboat/themes/dark"
+
