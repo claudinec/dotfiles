@@ -4,6 +4,7 @@ if status is-interactive
     test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 
     set -Ux XDG_CONFIG_HOME $HOME/.config
+    set -Ux XDG_DATA_HOME $HOME/.local/share
     set -Ux EDITOR vim --nofork
 
     # set program-specific editors
