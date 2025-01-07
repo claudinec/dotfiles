@@ -1,0 +1,14 @@
+function pinboard_add
+    # Add a bookmark to Pinboard via curl.
+    argparse 'u/url=' 't/title=' 'd/description=?' -- $argv
+    or return
+
+    set curl_url (string join "" "https://api.pinboard.in/v1/posts/add?auth_token={{ .pinboardToken }}" "&url=$_flag_url&description=" (string escape --style=url "$_flag_title"))
+    if test -z $_flag_description
+        echo $curl_url
+        curl $curl_url
+    else
+        curl (string join "" $curl_url "&extended=" (string escape --style=url "$_flag_description"))
+    end
+end
+
