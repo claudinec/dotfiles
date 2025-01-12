@@ -1,0 +1,21 @@
+function pinboard_to_archivebox
+    # Add recent Pinboard bookmarks to ArchiveBox queue.
+    # Docs: https://pinboard.in/api/#posts_recent
+    # argparse 'c/count=?!_validate_int' 't/tag=?' -- $argv
+    argparse 't/tag=?' -- $argv
+    or return
+
+    if test (uname -s) = Darwin
+        set -g archivebox_queue $HOME/Documents/archivebox-queue
+    else
+        set -g archivebox_queue $XDG_DATA_HOME/archivebox-queue
+    end
+
+    set curl_url "https://api.pinboard.in/v1/posts/recent?auth_token={{ .pinboardToken }}&format=json"
+    if test -z $_flag_tag
+        curl $curl_url | jq '.posts[].href' >> $archivebox_queue/recent.txt
+    else
+        curl (string join "" $curl_url "&tag=$_flag_tag") | jq '.posts[].href' >> $archivebox_queue/$_flag_tag.txt
+    end
+end
+
