@@ -3,12 +3,16 @@
 # general
 browser "open"
 cookie-cache "~/.local/share/newsboat/cookies.txt"
+reload-threads 4
+
+# colour
+include "~/.local/share/catppuccin/newsboat/themes/dark"
 
 # NewsBlur
 urls-source "newsblur"
 newsblur-login {{ .newsblurAccount }}
 newsblur-password {{ onepasswordRead .newsblurOnepasswordUrl }}
 
-# colour
-include "~/.local/share/catppuccin/newsboat/themes/dark"
+# bookmarking
+# bookmark-cmd is given four arguments: URL, post title, description, feed title
 
