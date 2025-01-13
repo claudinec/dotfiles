@@ -15,6 +15,11 @@ if status is-interactive
     set -Ux GIT_EDITOR vim
     {{- end }}
 
+    type -q zoxide
+    if test $status -eq 0
+        zoxide init fish | source
+    end
+
     # mac only
     if test (uname -s) = Darwin
         set -Ux PYENV_ROOT $HOME/.pyenv
