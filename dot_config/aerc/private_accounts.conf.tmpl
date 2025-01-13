@@ -1,0 +1,35 @@
+[M-{{ .personalEmailAccount }}]
+source   = maildir://~/Mail/{{ .personalEmailAccount }}
+outgoing = {{ .chezmoi.pathSeparator }}opt{{ .chezmoi.pathSeparator }}homebrew{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathSeparator }}msmtp --account={{ .personalEmailAccount }}
+from     = {{ .name }} <{{ .personalEmailAddress }}>
+aliases             = {{ .personalEmailLogin }},*@{{ .personalEmailDomain }}
+enable-folders-sort = true
+folders-sort        = INBOX
+default  = INBOX
+copy-to  = Sent
+postpone = Drafts
+archive  = Archive
+
+[J-{{ .personalEmailAccount }}]
+source              = jmap+oauthbearer://:fmu1-ce9341ae-05b53b532ac1a72c665b50839eade8ab-0-dab6e2765e8c06680991dd5c3bb0428b@api.fastmail.com/.well-known/jmap
+outgoing            = jmap://:fmu1-ce9341ae-05b53b532ac1a72c665b50839eade8ab-0-dab6e2765e8c06680991dd5c3bb0428b@
+from                = {{ .name }} <{{ .personalEmailAddress }}>
+aliases             = {{ .personalEmailLogin }},*@{{ .personalEmailDomain }}
+default             = Inbox
+enable-folders-sort = true
+folders-sort        = Inbox
+use-labels          = true
+cache-state         = true
+cache-blobs         = false
+
+[M-{{ .workEmailAccount }}]
+source   = maildir://~/Mail/{{ .workEmailDir }}
+outgoing = {{ .chezmoi.pathSeparator }}opt{{ .chezmoi.pathSeparator }}homebrew{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathSeparator }}msmtp --account={{ .workEmailAccount }}
+from     = {{ .name }} <{{ .workEmailAddress }}>
+enable-folders-sort = true
+folders-sort        = INBOX
+default  = INBOX
+copy-to  = INBOX.Sent
+postpone = INBOX.Drafts
+archive  = INBOX.Archive
+
