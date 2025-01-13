@@ -1,7 +1,8 @@
 # https://alot.readthedocs.io/en/latest/configuration/config_options.html
 # display
-displayed_headers=From, To, Cc, Bcc, Reply-To, Subject, Date, List-ID, User-Agent, X-Mailer
+displayed_headers=From, To, Cc, Bcc, Reply-To, Subject, Date, Message-ID, List-ID, User-Agent, X-Mailer
 prefer_plaintext=true
+quit_on_last_bclose=true
 tabwidth=4
 timestamp_format=%F %R
 
@@ -20,17 +21,17 @@ honor_followup_to=True
         draft_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .personalEmailAccount }}{{ .chezmoi.pathSeparator }}Drafts
         sendmail_command = msmtp --account={{ .personalEmailAccount }} -t
         message_id_domain = {{ .personalEmailDomain }}
-        signature = ~/.local/share/signatures/Personal
+        signature = ~/.local/share/signatures/{{ .personalEmailAccount }}
 
     {{ if .workEmailAccount -}}
     [[{{ .workEmailAccount }}]]
         realname = {{ .name }}
         address = {{ .workEmailAddress }}
         alias_regexp = .+@claudinec.net
-        sent_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .workEmailDir }}{{ .chezmoi.pathSeparator }}Sent
-        draft_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .workEmailDir }}{{ .chezmoi.pathSeparator }}Drafts
+        sent_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .workEmailDir }}{{ .chezmoi.pathSeparator }}Inbox.Sent
+        draft_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .workEmailDir }}{{ .chezmoi.pathSeparator }}Inbox.Drafts
         sendmail_command = msmtp --account={{ .workEmailAccount }} -t
         message_id_domain = {{ .workEmailDomain }}
-        signature = ~/.local/share/signatures/AQuAOffice
+        signature = ~/.local/share/signatures/{{ .workEmailAccount }}
     {{- end }}
 
