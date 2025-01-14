@@ -9,7 +9,7 @@ default  = INBOX
 copy-to  = Sent
 postpone = Drafts
 archive  = Archive
-signature-file      = ~/.local/share/signatures/{{ .personalEmailAccount }}
+signature-file      = ~/.local/share/signatures/Personal
 
 [J-{{ .personalEmailAccount }}]
 source              = jmap+oauthbearer://:fmu1-ce9341ae-05b53b532ac1a72c665b50839eade8ab-0-dab6e2765e8c06680991dd5c3bb0428b@api.fastmail.com/.well-known/jmap
@@ -22,7 +22,7 @@ folders-sort        = Inbox
 use-labels          = true
 cache-state         = true
 cache-blobs         = false
-signature-file      = ~/.local/share/signatures/{{ .personalEmailAccount }}
+signature-file      = ~/.local/share/signatures/Personal
 
 [M-{{ .workEmailAccount }}]
 source   = maildir://~/Mail/{{ .workEmailDir }}
