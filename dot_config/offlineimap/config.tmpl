@@ -7,11 +7,14 @@ accounts = {{ .personalEmailAccount }}, {{ .workEmailAccount }}
 {{- else }}
 accounts = {{ .personalEmailAccount }}
 {{- end }}
-
+maxsyncaccounts = 1
+ 
 [Account {{ .personalEmailAccount }}]
 localrepository = LocalFastmail
 remoterepository = RemoteFastmail
+# quick = 5
 maxage = 180
+postsynchook = notmuch new
 
 [Repository Local{{ .personalEmailAccount }}]
 type = Maildir
@@ -33,6 +36,7 @@ createfolders = False
 [Account {{ .workEmailAccount }}]
 localrepository = Local{{ .workEmailAccount }}
 remoterepository = Remote{{ .workEmailAccount }}
+postsynchook = notmuch new
 
 [Repository Local{{ .workEmailAccount }}]
 type = Maildir
