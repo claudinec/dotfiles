@@ -9,6 +9,7 @@ set editor="vim"
 set forward_format="Fwd: %s (%n)"
 set from={{ .personalEmailAddress }}
 set imap_headers="X-SPAM-SCORE"
+set index_format="%4C %Z %[%F %a] %-32.32L (%<l?%4l&%4c>) %-16.16g %s"
 set mbox_type=Maildir
 set pager_context=1
 set pager_index_lines=5
@@ -22,9 +23,10 @@ set sort="reverse-last-date"
 set sort_aux="date"
 set spool_file="inbox"
 set use_threads="threads"
+set user_agent=yes
 
 # Header display.
-unignore bcc reply-to
+unignore bcc reply-to user-agent x-mailer folder tags
 
 # Spam detection.
 spam "X-Spam-Score"   "5+"
@@ -56,10 +58,16 @@ set nm_record=yes
 set nm_record_tags="-inbox,sent"
 
 virtual-mailboxes inbox "notmuch://?query=tag:inbox and not tag:aqua"
-virtual-mailboxes aqua_inbox "notmuch://?query=tag:aqua"
+virtual-mailboxes aqua_inbox "notmuch://?query=tag:inbox and tag:aqua"
+virtual-mailboxes sent "notmuch://?query=tag:sent"
 
 bind index,pager \` modify-labels
+bind index,pager \\ vfolder-from-query
 
 #### External ####
 ## Colours
 source "catppuccin"
+
+## Mailing lists
+source "lists"
+
