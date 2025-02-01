@@ -1,0 +1,61 @@
+#### Neomutt ####
+# Guide: https://neomutt.org/guide/configuration
+# Reference: https://neomutt.org/guide/reference
+# Patterns: https://neomutt.org/guide/advancedusage.html#patterns
+# index_format: https://neomutt.org/guide/reference.html#3-217-%C2%A0index_format
+
+set edit_headers=yes
+set editor="vim"
+set forward_format="Fwd: %s (%n)"
+set from={{ .personalEmailAddress }}
+set imap_headers="X-SPAM-SCORE"
+set mbox_type=Maildir
+set pager_context=1
+set pager_index_lines=5
+set postponed="~/Mail/Drafts"
+set record="~/Mail/Sent"
+set sendmail={{ lookPath "msmtp" }}
+set sendmail_wait=5
+set signature="~/.local/share/signatures/Personal"
+set sort="reverse-last-date"
+set sort_aux="date"
+set spool_file="inbox"
+set use_threads="threads"
+
+# Header display.
+unignore bcc reply-to
+
+# Spam detection.
+spam "X-Spam-Score"   "5+"
+
+# https://neomutt.org/guide/configuration#18-%C2%A0specify-default-fcc-and-or-save-mailbox
+save-hook . ~/Mail/Archive/%L/%[%Y]
+fcc-hook . ~/Mail/Archive/%O/%[%Y]
+
+# https://neomutt.org/guide/configuration.html#13-%C2%A0alternative-addresses
+alternates '.+@claudinec\.net'
+alternates -group aqua_me '(office|volunteers)@queerarchives\.org\.au'
+
+# https://neomutt.org/guide/configuration.html#4-%C2%A0address-groups
+group -group aqua_all -rx '.+@queerarchives\.org\.au'
+group -group vpc_all -rx '.+@pridecentre\.org\.au'
+
+# https://neomutt.org/guide/configuration.html#19-%C2%A0change-settings-based-upon-message-recipients
+send-hook '%L aqua_all | %L vpc_all' 'set signature="~/.local/share/signatures/AQuAOffice"'
+
+# Call urlview.
+macro index \cb |urlview\n
+macro pager \cb |urlview\n
+
+#### Notmuch ####
+# Docs: https://neomutt.org/feature/notmuch
+# Tags: https://neomutt.org/feature/custom-tags
+set nm_default_url="notmuch://{{ .chezmoi.homeDir }}/Mail"
+set nm_record=yes
+set nm_record_tags="-inbox,sent"
+
+virtual-mailboxes inbox "notmuch://?query=tag:inbox"
+virtual-mailboxes aqua_inbox "notmuch://?query=tag:aqua"
+
+bind index,pager \` modify-labels
+
