@@ -1,0 +1,57 @@
+# Public Mutt configuration.
+
+set alias_file="~/.muttrc.aliases"
+set edit_headers=yes
+set editor="/usr/bin/vi"
+set forward_format="[%n] %s"
+set imap_headers="X-SPAM-SCORE"
+# set mbox_type=Maildir
+set mbox_type=mbox
+set pager_context=1
+set pager_index_lines=5
+set postponed="~/Mail/postponed"
+set sendmail="/usr/local/bin/msmtp"
+set sendmail_wait=5
+set sort="threads"
+# set sort_aux="last-date-received"
+set sort_aux="last-date-sent"
+set visual="mvim"   # MacVim
+
+source ~/.muttrc.aliases
+set query_command="lbdbq '%s'"
+
+# Abook setup from https://dev.mutt.org/trac/wiki/MuttGuide/Aliases
+# set query_command="abook --mutt-query '%s'"
+# macro generic,index,pager \ca "<shell-escape>abook<return>" "launch abook"
+# macro index,pager A "<pipe-message>abook --add-email<return>" "add the sender address to abook"
+
+# Header display.
+unignore bcc reply-to
+
+# Spam detection.
+spam "X-Spam-Score"   "5+"
+
+# Archive mail in a folder named for the mailing list or original
+# folder.
+save-hook . ~/Mail/Archive/%B
+fcc-hook . ~/Mail/Archive/%O
+
+# Call urlview.
+macro index \cb |urlview\n
+macro pager \cb |urlview\n
+
+# GPG
+# source /usr/local/share/doc/mutt/samples/gpg.rc
+
+# Notmuch.
+source ~/.dotfiles/muttrc.notmuch
+
+# Muttils.
+# source ~/.dotfiles/muttrc.muttils
+
+# Colour scheme.
+source ~/Projects/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
+
+# Source private config.
+source ~/.muttrc.private
+
