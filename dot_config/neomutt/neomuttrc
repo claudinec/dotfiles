@@ -1,0 +1,32 @@
+#### Neomutt ####
+# Docs: https://neomutt.org/guide/configuration
+# Patterns: https://neomutt.org/guide/advancedusage.html#patterns
+# index_format: https://neomutt.org/guide/reference.html#3-217-%C2%A0index_format
+
+set edit_headers=yes
+set editor="vim"
+set forward_format="[%n] %s"
+set imap_headers="X-SPAM-SCORE"
+set mbox_type=Maildir
+set pager_context=1
+set pager_index_lines=5
+set postponed="~/Mail/Drafts"
+set record="~/Mail/Sent"
+set sendmail="msmtp"
+set sendmail_wait=5
+set sort="threads"
+set sort_aux="last-date-sent"
+
+# Header display.
+unignore bcc reply-to
+
+# Spam detection.
+spam "X-Spam-Score"   "5+"
+
+# https://neomutt.org/guide/configuration#18-%C2%A0specify-default-fcc-and-or-save-mailbox
+save-hook . ~/Mail/Archive/%L/%[%Y]
+fcc-hook . ~/Mail/Archive/%O/%[%Y]
+
+# Call urlview.
+macro index \cb |urlview\n
+macro pager \cb |urlview\n
