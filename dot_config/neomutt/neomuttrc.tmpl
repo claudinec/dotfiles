@@ -9,7 +9,7 @@ set editor="vim"
 set forward_format="Fwd: %s (%n)"
 set from={{ .personalEmailAddress }}
 set imap_headers="X-SPAM-SCORE"
-set index_format="%4C %Z %[%F %a] %-32.32L (%<l?%4l&%4c>) %-16.16g %s"
+set index_format="%4C %Z %[%a %F %R] %-32.32L (%<l?%4l&%4c>) %-16.16g %s"
 set mbox_type=Maildir
 set pager_context=1
 set pager_index_lines=5
@@ -32,7 +32,7 @@ unignore bcc reply-to user-agent x-mailer folder tags
 spam "X-Spam-Score"   "5+"
 
 # https://neomutt.org/guide/configuration#18-%C2%A0specify-default-fcc-and-or-save-mailbox
-save-hook . ~/Mail/Archive/%L/%[%Y]
+save-hook . ~/Mail/Archive/%[%Y]
 fcc-hook . ~/Mail/Sent/%O
 
 # https://neomutt.org/guide/configuration.html#13-%C2%A0alternative-addresses
