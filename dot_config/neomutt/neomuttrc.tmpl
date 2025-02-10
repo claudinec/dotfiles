@@ -4,18 +4,21 @@
 # Patterns: https://neomutt.org/guide/advancedusage.html#patterns
 # index_format: https://neomutt.org/guide/reference.html#3-217-%C2%A0index_format
 
+set assumed_charset="utf-8"
+set attach_save_dir="~/Desktop"
+set attribution_intro="Quoting %n (%{%F %R})"
 set edit_headers=yes
 set editor="vim"
 set forward_format="Fwd: %s (%n)"
 set from={{ .personalEmailAddress }}
 set imap_headers="X-SPAM-SCORE"
-set index_format="%4C %Z %[%a %F %R] %-32.32L (%<l?%4l&%4c>) %-16.16g %s"
+set index_format="%4C %Z %[%a %F %R] %-32.32L (%<l?%4l&%4c>) %-24.24g %-24.24b %s"
 set mbox_type=Maildir
 set pager_context=1
 set pager_index_lines=5
 set postponed="~/Mail/Drafts"
 set record="~/Mail/Sent"
-set sendmail={{ lookPath "msmtp" }} --account={{ .personalEmailAccount }} -t
+set sendmail='{{ lookPath "msmtp" }} --account={{ .personalEmailAccount }} -t'
 set sendmail_wait=5
 set sig_dashes=no   # sig files start with dashes because of other programs
 set signature="~/.local/share/signatures/Personal"
@@ -24,6 +27,9 @@ set sort_aux="date"
 set spool_file="inbox"
 set use_threads="threads"
 set user_agent=yes
+
+# https://neomutt.org/guide/configuration.html#mailboxes
+mailboxes -nonotify -nopoll "~/Mail/Fastmail/INBOX"
 
 # Header display.
 unignore message-id bcc reply-to user-agent x-mailer folder tags
@@ -36,7 +42,7 @@ save-hook . ~/Mail/Archive/%[%Y]
 fcc-hook . ~/Mail/Sent/%O
 
 # https://neomutt.org/guide/configuration.html#13-%C2%A0alternative-addresses
-alternates '.+@claudinec\.net'
+alternates ".+@claudinec\.net"
 
 # Call urlview.
 macro index \cb |urlview\n
@@ -46,6 +52,7 @@ macro pager \cb |urlview\n
 # Docs: https://neomutt.org/feature/notmuch
 # Tags: https://neomutt.org/feature/custom-tags
 set nm_default_url="notmuch://{{ .chezmoi.homeDir }}/Mail"
+set nm_exclude_tags="spam,trash"
 set nm_record=yes
 set nm_record_tags="-inbox,sent"
 

@@ -1,20 +1,23 @@
 #### Neomutt setup for work ####
 # vim: set syntax=neomuttrc:
 
+# aqua_inbox virtual mailbox
+virtual-mailboxes aqua_all "notmuch://?query=tag:aqua"
+virtual-mailboxes aqua_inbox "notmuch://?query=tag:aqua and tag:inbox"
+mailboxes -notify -nopoll "~/Mail/AQuA/office/INBOX"
+folder-hook AQuA 'alternates "(office|volunteers)@queerarchives.org.au"'
+folder-hook AQuA 'set attach_save_dir="~/Documents/311-AQuA_ef/To Import (311-AQuA_ef)"'
+folder-hook AQuA 'set from=office@queerarchives.org.au'
+folder-hook AQuA 'set record="~/Mail/AQuA/office/INBOX.Sent"'
+folder-hook AQuA 'set signature="~/.local/share/signatures/AQuAOffice"'
+folder-hook AQuA 'set sendmail="/opt/homebrew/bin/msmtp --account=AQuAOffice -t"'
+folder-hook AQuA 'save-hook . ~/Mail/AQuA/office/INBOX.Archive.%[%Y]'
+folder-hook 04-volunteers 'set from=volunteers@queerarchives.org.au'
+
 # https://neomutt.org/guide/configuration.html#13-%C2%A0alternative-addresses
-alternates -group aqua_me '(office|volunteers)@queerarchives\.org\.au'
+alternates -group aqua_me "(office|volunteers)@queerarchives\.org\.au"
 
 # https://neomutt.org/guide/configuration.html#4-%C2%A0address-groups
 group -group aqua_all -rx '.+@queerarchives\.org\.au'
 group -group vpc_all -rx '.+@pridecentre\.org\.au'
 
-# https://neomutt.org/guide/configuration.html#19-%C2%A0change-settings-based-upon-message-recipients
-reply-hook '%L aqua_me' 'set signature="~/.local/share/signatures/AQuAOffice"'
-reply-hook '%L aqua_me' 'set sendmail={{ lookPath "msmtp" }} --account={{ .workEmailAccount }} -t'
-send-hook '%L aqua_all | %L vpc_all' 'set signature="~/.local/share/signatures/AQuAOffice"'
-send-hook '%L aqua_all | %L vpc_all' 'set sendmail={{ lookPath "msmtp" }} --account={{ .workEmailAccount }} -t'
-
-#### Notmuch ####
-# Docs: https://neomutt.org/feature/notmuch
-# Tags: https://neomutt.org/feature/custom-tags
-virtual-mailboxes aqua_inbox "notmuch://?query=tag:inbox and tag:aqua"
