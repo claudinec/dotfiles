@@ -30,7 +30,7 @@ honor_followup_to=True
     [[{{ .workEmailAccount }}]]
         realname = {{ .name }}
         address = {{ .workEmailAddress }}
-        alias_regexp = .+@claudinec.net
+        alias_regexp = .+@queerarchives.org.au
         sent_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .workEmailDir }}{{ .chezmoi.pathSeparator }}Inbox.Sent
         draft_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .workEmailDir }}{{ .chezmoi.pathSeparator }}Inbox.Drafts
         sendmail_command = msmtp --account={{ .workEmailAccount }} -t
