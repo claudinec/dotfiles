@@ -1,0 +1,23 @@
+#### Neomutt personal setup ####
+# vim: set syntax=neomuttrc:
+
+# https://neomutt.org/guide/configuration.html#mailboxes
+mailboxes -nonotify -nopoll "~/Mail/Fastmail/INBOX"
+virtual-mailboxes inbox "notmuch://?query=tag:inbox and not tag:aqua"
+virtual-mailboxes sent "notmuch://?query=tag:sent and not tag:aqua"
+
+# https://neomutt.org/guide/configuration.html#13-%C2%A0alternative-addresses
+alternates ".+@claudinec\.net"
+set from={{ .personalEmailAddress }}
+set postponed="~/Mail/Fastmail/Drafts"
+set record="~/Mail/Fastmail/Sent"
+set sendmail='{{ lookPath "msmtp" }} --account={{ .personalEmailAccount }} -t'
+set signature="~/.local/share/signatures/Personal"
+
+# https://neomutt.org/guide/configuration#18-%C2%A0specify-default-fcc-and-or-save-mailbox
+save-hook . ~/Mail/Fastmail/Archive/%[%Y]
+fcc-hook . ~/Mail/Fastmal/Sent/%O
+
+#### Common config
+source "neomuttrc"
+

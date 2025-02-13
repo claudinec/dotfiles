@@ -1,4 +1,6 @@
 #### Neomutt ####
+# Common neomutt configuration.
+# `source` this file from profile-specific configs.
 # Guide: https://neomutt.org/guide/configuration
 # Reference: https://neomutt.org/guide/reference
 # Patterns: https://neomutt.org/guide/advancedusage.html#patterns
@@ -10,39 +12,24 @@ set attribution_intro="Quoting %n (%{%F %R})"
 set edit_headers=yes
 set editor="vim"
 set forward_format="Fwd: %s (%n)"
-set from={{ .personalEmailAddress }}
 set imap_headers="X-SPAM-SCORE"
 set index_format="%4C %Z %[%a %F %R] %-32.32L (%<l?%4l&%4c>) %-24.24g %-24.24b %s"
 set mbox_type=Maildir
 set pager_context=1
 set pager_index_lines=5
-set postponed="~/Mail/Drafts"
-set record="~/Mail/Sent"
-set sendmail='{{ lookPath "msmtp" }} --account={{ .personalEmailAccount }} -t'
 set sendmail_wait=5
 set sig_dashes=no   # sig files start with dashes because of other programs
-set signature="~/.local/share/signatures/Personal"
 set sort="reverse-last-date"
 set sort_aux="date"
 set spool_file="inbox"
 set use_threads="threads"
 set user_agent=yes
 
-# https://neomutt.org/guide/configuration.html#mailboxes
-mailboxes -nonotify -nopoll "~/Mail/Fastmail/INBOX"
-
 # Header display.
 unignore message-id bcc reply-to user-agent x-mailer folder tags
 
 # Spam detection.
 spam "X-Spam-Score"   "5+"
-
-# https://neomutt.org/guide/configuration#18-%C2%A0specify-default-fcc-and-or-save-mailbox
-save-hook . ~/Mail/Archive/%[%Y]
-fcc-hook . ~/Mail/Sent/%O
-
-# https://neomutt.org/guide/configuration.html#13-%C2%A0alternative-addresses
-alternates ".+@claudinec\.net"
 
 # Call urlview.
 macro index \cb |urlview\n
@@ -56,9 +43,6 @@ set nm_exclude_tags="spam,trash"
 set nm_record=yes
 set nm_record_tags="-inbox,sent"
 
-virtual-mailboxes inbox "notmuch://?query=tag:inbox and not tag:aqua"
-virtual-mailboxes sent "notmuch://?query=tag:sent"
-
 bind index,pager \` modify-labels
 bind index,pager \\ vfolder-from-query
 
@@ -68,7 +52,3 @@ source "catppuccin"
 
 ## Mailing lists
 source "lists"
-
-## Hooks etc for work
-source "work"
-
