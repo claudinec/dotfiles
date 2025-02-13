@@ -3,6 +3,7 @@
 
 # https://neomutt.org/guide/configuration.html#mailboxes
 mailboxes -nonotify -nopoll "~/Mail/Fastmail/INBOX"
+virtual-mailboxes all "notmuch://?query=not tag:aqua"
 virtual-mailboxes inbox "notmuch://?query=tag:inbox and not tag:aqua"
 virtual-mailboxes sent "notmuch://?query=tag:sent and not tag:aqua"
 
