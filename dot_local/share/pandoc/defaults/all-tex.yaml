@@ -1,5 +1,4 @@
 defaults:
 - all
 variables:
-  papersize: a4
   fontfamily: noto
