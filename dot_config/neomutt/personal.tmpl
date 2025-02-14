@@ -1,6 +1,9 @@
 #### Neomutt personal setup ####
 # vim: set syntax=neomuttrc:
 
+#### Common config
+source "neomuttrc"
+
 # https://neomutt.org/guide/configuration.html#mailboxes
 mailboxes -nonotify -nopoll "~/Mail/Fastmail/INBOX"
 virtual-mailboxes all "notmuch://?query=not tag:aqua"
@@ -19,6 +22,7 @@ set signature="~/.local/share/signatures/Personal"
 save-hook . ~/Mail/Fastmail/Archive/%[%Y]
 fcc-hook . ~/Mail/Fastmail/Sent/%O
 
-#### Common config
-source "neomuttrc"
+## aliases
+set alias_file="aliases-personal"
+source "aliases-personal"
 

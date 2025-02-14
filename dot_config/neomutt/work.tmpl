@@ -1,6 +1,9 @@
 #### Neomutt work setup ####
 # vim: set syntax=neomuttrc:
 
+#### Common config
+source "neomuttrc"
+
 # https://neomutt.org/guide/configuration.html#mailboxes
 mailboxes -notify -nopoll "~/Mail/AQuA/office/INBOX"
 virtual-mailboxes all "notmuch://?query=tag:aqua"
@@ -22,6 +25,7 @@ set signature="~/.local/share/signatures/AQuAOffice"
 save-hook . "~/Mail/AQuA/office/INBOX/Archive/%[%Y]"
 folder-hook 04-volunteers 'set from=volunteers@queerarchives.org.au'
 
-#### Common config
-source "neomuttrc"
+## aliases
+set alias_file="aliases-work"
+source "aliases-work"
 
