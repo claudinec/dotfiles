@@ -16,25 +16,10 @@ honor_followup_to=True
 
 # https://alot.readthedocs.io/en/latest/configuration/accounts.html
 [accounts]
-    [[{{ .personalEmailAccount }}]]
-        realname = {{ .name }}
-        address = {{ .personalEmailAddress }}
-        alias_regexp = .+@claudinec.net
-        sent_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .personalEmailAccount }}{{ .chezmoi.pathSeparator }}Sent
-        draft_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .personalEmailAccount }}{{ .chezmoi.pathSeparator }}Drafts
-        sendmail_command = msmtp --account={{ .personalEmailAccount }} -t
-        message_id_domain = {{ .personalEmailDomain }}
-        signature = ~/.local/share/signatures/Personal
+    {{ template "alot_account.tmpl" .emailAccounts.Fastmail }}
 
-    {{ if .workEmailAccount -}}
-    [[{{ .workEmailAccount }}]]
-        realname = {{ .name }}
-        address = {{ .workEmailAddress }}
-        alias_regexp = .+@queerarchives.org.au
-        sent_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .workEmailDir }}{{ .chezmoi.pathSeparator }}Inbox.Sent
-        draft_box = maildir://~/Mail{{ .chezmoi.pathSeparator }}{{ .workEmailDir }}{{ .chezmoi.pathSeparator }}Inbox.Drafts
-        sendmail_command = msmtp --account={{ .workEmailAccount }} -t
-        message_id_domain = {{ .workEmailDomain }}
-        signature = ~/.local/share/signatures/{{ .workEmailAccount }}
+    {{ if eq .chezmoi.os "darwin" -}}
+    {{ template "alot_account.tmpl" .emailAccounts.AQuAOffice }}
+    {{ template "alot_account.tmpl" .emailAccounts.AQuAVolunteers }}
+
     {{- end }}
-

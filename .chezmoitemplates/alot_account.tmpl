@@ -1,0 +1,9 @@
+[[{{ .accountName }}]]
+        address = {{ .address }}
+        alias_regexp = .+@{{ .domain }}
+        sent_box = maildir://~/Mail/{{ .emailDir }}/Inbox/Sent
+        draft_box = maildir://~/Mail/{{ .emailDir }}/Inbox/Drafts
+        sendmail_command = msmtp --account={{ .accountName }} -t
+        message_id_domain = {{ .domain }}
+        signature = ~/.local/share/signatures/{{ .accountName }}
+
