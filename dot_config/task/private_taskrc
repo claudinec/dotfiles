@@ -25,3 +25,11 @@ hooks.location=~/.config/task/hooks
 #include solarized-light-256.theme
 #include no-color.theme
 
+# Contexts
+weekstart=monday
+context.aqua.read=project:aqua
+context.aqua.write=project:aqua
+context.personal.read=project:personal or project.not:aqua
+context.personal.write=project:personal
+
+# Additions below
