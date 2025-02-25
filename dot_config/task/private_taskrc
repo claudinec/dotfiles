@@ -17,7 +17,7 @@ hooks.location=~/.config/task/hooks
 #include dark-red-256.theme
 #include dark-green-256.theme
 #include dark-blue-256.theme
-#include dark-violets-256.theme
+include dark-violets-256.theme
 #include dark-yellow-green.theme
 #include dark-gray-256.theme
 #include dark-gray-blue-256.theme
@@ -27,9 +27,13 @@ hooks.location=~/.config/task/hooks
 
 # Contexts
 weekstart=monday
-context.aqua.read=project:aqua
-context.aqua.write=project:aqua
+context.at_aqua.read=project:aqua or +@readingroom
+context.at_aqua.write=project:aqua
+context.aqua_at_home.read=project:aqua and -@readingroom
+context.aqua_at_home.write=project:aqua
 context.personal.read=project:personal or project.not:aqua
 context.personal.write=project:personal
+context.safeguarding.read=project:safeguarding
+context.safeguarding.write=project:safeguarding
 
 # Additions below
