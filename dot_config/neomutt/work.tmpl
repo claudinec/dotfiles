@@ -22,10 +22,10 @@ set sendmail='{{ lookPath "msmtp" }} --account={{ .workEmailAccount }} -t'
 set signature="~/.local/share/signatures/AQuAOffice"
 
 # https://neomutt.org/guide/configuration#18-%C2%A0specify-default-fcc-and-or-save-mailbox
-save-hook . "~/Mail/AQuA/office/INBOX/Archive/%[%Y]"
+fcc-save-hook . "~/Mail/AQuA/office/INBOX/Archive/%[%Y/%m]"
 folder-hook 04-volunteers 'set from=volunteers@queerarchives.org.au'
 
 ## aliases
 set alias_file="$XDG_CONFIG_HOME/neomutt/aliases-work"
-source "$XDG_CONFIG_HOME/neomutt/aliases-work"
+source "aliases-work"
 
