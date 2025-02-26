@@ -25,15 +25,18 @@ include dark-violets-256.theme
 #include solarized-light-256.theme
 #include no-color.theme
 
-# Contexts
+# Defaults
+priority.default=L
 weekstart=monday
-context.at_aqua.read=project:aqua or +@readingroom
-context.at_aqua.write=project:aqua
-context.aqua_at_home.read=project:aqua and -@readingroom
+
+# Contexts
+context.aqua_at_home.read=project:aqua and -@readingroom and -@vpc
 context.aqua_at_home.write=project:aqua
+context.aqua_at_vpc.read=project:aqua or +@readingroom or +@vpc
+context.aqua_at_vpc.write=project:aqua
 context.personal.read=project:personal or project.not:aqua
 context.personal.write=project:personal
 context.safeguarding.read=project:safeguarding
 context.safeguarding.write=project:safeguarding
 
-# Additions below
+# Added by task command
