@@ -15,17 +15,18 @@ alternates -group aqua_me "(office|volunteers)@queerarchives\.org\.au"
 # https://neomutt.org/guide/configuration.html#4-%C2%A0address-groups
 group -group aqua_all -rx '.+@queerarchives\.org\.au'
 group -group vpc_all -rx '.+@pridecentre\.org\.au'
-set from={{ .workEmailAddress }}
+set from={{ .emailAccounts.AQuAOffice.address }}
 set postponed="~/Mail/AQuA/office/INBOX/Drafts"
 set record="~/Mail/AQuA/office/INBOX/Sent"
-set sendmail='{{ lookPath "msmtp" }} --account={{ .workEmailAccount }} -t'
+set sendmail='{{ lookPath "msmtp" }} --account={{ .emailAccounts.AQuAOffice.accountName }} -t'
 set signature="~/.local/share/signatures/AQuAOffice"
 
 # https://neomutt.org/guide/configuration#18-%C2%A0specify-default-fcc-and-or-save-mailbox
-save-hook . "~/Mail/AQuA/office/INBOX/Archive/%[%Y]"
+save-hook . "~/Mail/AQuA/office/INBOX/Archive/%[%Y/%m]"
+fcc-hook . "~/Mail/AQuA/office/INBOX/Sent"
 folder-hook 04-volunteers 'set from=volunteers@queerarchives.org.au'
 
 ## aliases
 set alias_file="$XDG_CONFIG_HOME/neomutt/aliases-work"
-source "$XDG_CONFIG_HOME/neomutt/aliases-work"
+source "aliases-work"
 

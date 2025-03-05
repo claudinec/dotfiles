@@ -5,8 +5,8 @@ news.version=3.3.0
 # To use the default location of the XDG directories,
 # move this configuration file from ~/.taskrc to ~/.config/task/taskrc and update location config as follows:
 
-#data.location=~/.local/share/task
-#hooks.location=~/.config/task/hooks
+data.location=~/.local/share/task
+hooks.location=~/.config/task/hooks
 
 # Color theme (uncomment one to use)
 #include light-16.theme
@@ -17,7 +17,7 @@ news.version=3.3.0
 #include dark-red-256.theme
 #include dark-green-256.theme
 #include dark-blue-256.theme
-#include dark-violets-256.theme
+include dark-violets-256.theme
 #include dark-yellow-green.theme
 #include dark-gray-256.theme
 #include dark-gray-blue-256.theme
@@ -25,3 +25,18 @@ news.version=3.3.0
 #include solarized-light-256.theme
 #include no-color.theme
 
+# Defaults
+priority.default=L
+weekstart=monday
+
+# Contexts
+context.aqua_at_home.read=project:aqua and -@readingroom and -@vpc
+context.aqua_at_home.write=project:aqua
+context.aqua_at_vpc.read=project:aqua or +@readingroom or +@vpc
+context.aqua_at_vpc.write=project:aqua
+context.personal.read=project:personal or project.not:aqua
+context.personal.write=project:personal
+context.safeguarding.read=project:safeguarding
+context.safeguarding.write=project:safeguarding
+
+# Added by task command

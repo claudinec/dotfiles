@@ -8,15 +8,14 @@ Helptags
 
 """" core options
 
-colorscheme catppuccin_macchiato
 """" OS appearance -> colour scheme
 " 0 = light mode or non-MacVim
 " 1 = dark mode
-" if v:os_appearance == 1
-"     colorscheme catppuccin_macchiato
-" else
-"     colorscheme catppuccin_frappe
-" endif
+if v:os_appearance
+    colorscheme catppuccin_macchiato
+else
+    colorscheme catppuccin_latte
+endif
 
 set autochdir
 set autoread
@@ -64,7 +63,7 @@ set smartindent
 
 set tabstop=4
 set termguicolors
-set textwidth=72
+set textwidth=0
 
 set writebackup
 
