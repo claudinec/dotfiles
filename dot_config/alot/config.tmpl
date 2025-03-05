@@ -20,6 +20,4 @@ honor_followup_to=True
 
     {{ if eq .chezmoi.os "darwin" -}}
     {{ template "alot_account.tmpl" .emailAccounts.AQuAOffice }}
-    {{ template "alot_account.tmpl" .emailAccounts.AQuAVolunteers }}
-
     {{- end }}
