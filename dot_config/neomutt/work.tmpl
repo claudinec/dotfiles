@@ -6,8 +6,8 @@ source "neomuttrc"
 
 # https://neomutt.org/guide/configuration.html#mailboxes
 mailboxes -notify -nopoll "~/Mail/AQuA/office/INBOX"
-virtual-mailboxes all "notmuch://?query=tag:aqua"
-virtual-mailboxes inbox "notmuch://?query=tag:aqua and tag:inbox"
+virtual-mailboxes all "notmuch://?query=query:aqua_all"
+virtual-mailboxes inbox "notmuch://?query=query:aqua_inbox"
 
 # https://neomutt.org/guide/configuration.html#13-%C2%A0alternative-addresses
 alternates -group aqua_me "(office|volunteers)@queerarchives\.org\.au"
