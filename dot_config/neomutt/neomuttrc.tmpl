@@ -28,12 +28,15 @@ set user_agent=yes
 # Header display.
 unignore message-id bcc reply-to user-agent x-mailer folder tags
 
-# Spam detection.
+# Spam handling.
 spam "X-Spam-Score"   "5+"
+macro index,pager \cs <modify-labels>spam\ns "Label spam then prompt for new folder"
+
+# MIME auto view.
+auto_view text/html
 
 # Call urlview.
-macro index \cb |urlview\n
-macro pager \cb |urlview\n
+macro index,pager \cb |urlview\n
 
 #### Notmuch ####
 # Docs: https://neomutt.org/feature/notmuch
