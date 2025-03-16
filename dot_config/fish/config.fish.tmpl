@@ -6,6 +6,7 @@ if status is-interactive
     set -Ux XDG_CONFIG_HOME $HOME/.config
     set -Ux XDG_DATA_HOME $HOME/.local/share
     set -Ux EDITOR vim --nofork
+    set -Ux LC_ALL en_AU.UTF-8
 
     # set program-specific editors
     {{ if eq .chezmoi.os "darwin" -}}
