@@ -8,12 +8,13 @@ accounts = {{ .personalEmailAccount }}, {{ .workEmailAccount }}
 accounts = {{ .personalEmailAccount }}
 {{- end }}
 maxsyncaccounts = 1
- 
+socktimeout = 120
+
 [Account {{ .personalEmailAccount }}]
 localrepository = LocalFastmail
 remoterepository = RemoteFastmail
-# quick = 5
-maxage = 180
+quick = 5
+maxage = 240
 postsynchook = notmuch new
 
 [Repository Local{{ .personalEmailAccount }}]
@@ -36,11 +37,14 @@ createfolders = False
 [Account {{ .workEmailAccount }}]
 localrepository = Local{{ .workEmailAccount }}
 remoterepository = Remote{{ .workEmailAccount }}
+quick = 5
 postsynchook = notmuch new
 
 [Repository Local{{ .workEmailAccount }}]
 type = Maildir
 localfolders = {{ joinPath .chezmoi.homeDir "Mail" .workEmailDir }}
+sep = /
+sync_deletes = yes
 
 [Repository Remote{{ .workEmailAccount }}]
 type = IMAP
@@ -54,4 +58,5 @@ sslcacertfile = OS-DEFAULT
 {{- end }}
 createfolders = False
 {{- end }}
+sync_deletes = no
 
