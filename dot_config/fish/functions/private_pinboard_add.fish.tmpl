@@ -5,7 +5,6 @@ function pinboard_add
 
     set curl_url (string join "" "https://api.pinboard.in/v1/posts/add?auth_token={{ .pinboardToken }}" "&url=$_flag_url&description=" (string escape --style=url "$_flag_title"))
     if test -z $_flag_description
-        echo $curl_url
         curl $curl_url
     else
         curl (string join "" $curl_url "&extended=" (string escape --style=url "$_flag_description"))
