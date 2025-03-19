@@ -14,6 +14,7 @@ virtual-mailboxes todo "notmuch://?query=query:personal_todo"
 # https://neomutt.org/guide/configuration.html#13-%C2%A0alternative-addresses
 alternates ".+@claudinec\.net"
 set from={{ .emailAccounts.Fastmail.address }}
+set index_format="%4C %Z %[%a %F %R] %-32.32L (%<l?%4l&%4c>) %-24.24g %-24.24b %s"
 set postponed="~/Mail/Fastmail/Drafts"
 set record="~/Mail/Fastmail/Sent"
 set sendmail='{{ lookPath "msmtp" }} --account={{ .emailAccounts.Fastmail.accountName }} -t'
