@@ -10,27 +10,19 @@ virtual-mailboxes all "notmuch://?query=query:aqua_all"
 virtual-mailboxes inbox "notmuch://?query=query:aqua_inbox"
 virtual-mailboxes todo "notmuch://?query=query:aqua_todo"
 
-# https://neomutt.org/guide/configuration.html#13-%C2%A0alternative-addresses
-alternates -group aqua_me "(office|volunteers)@queerarchives\.org\.au"
-
-# https://neomutt.org/guide/configuration.html#4-%C2%A0address-groups
+## addresses and aliases
+set from={{ .emailAccounts.AQuAOffice.address }}
+set alias_file="$XDG_CONFIG_HOME/neomutt/aliases-work"
+source "aliases-work"
 group -group aqua_all -rx '.+@queerarchives\.org\.au'
 group -group vpc_all -rx '.+@pridecentre\.org\.au'
-set from={{ .emailAccounts.AQuAOffice.address }}
+
+# additional config
 set postponed="~/Mail/AQuA/office/INBOX/Drafts"
 set record="~/Mail/AQuA/office/INBOX/Sent"
 set sendmail='{{ lookPath "msmtp" }} --account={{ .emailAccounts.AQuAOffice.accountName }} -t'
 set signature="~/.local/share/signatures/AQuAOffice"
+save-hook . "~/Mail/AQuA/office/INBOX/Archive/%[%Y/%m]"
 
 # munge subjects -- institutional warnings
 subjectrx '\[EXT\]' '%R'
-
-# https://neomutt.org/guide/configuration#18-%C2%A0specify-default-fcc-and-or-save-mailbox
-save-hook . "~/Mail/AQuA/office/INBOX/Archive/%[%Y/%m]"
-fcc-hook . "~/Mail/AQuA/office/INBOX/Sent"
-folder-hook 04-volunteers 'set from=volunteers@queerarchives.org.au'
-
-## aliases
-set alias_file="$XDG_CONFIG_HOME/neomutt/aliases-work"
-source "aliases-work"
-
