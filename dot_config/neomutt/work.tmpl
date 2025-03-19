@@ -23,6 +23,9 @@ set postponed="~/Mail/AQuA/office/INBOX/Drafts"
 set record="~/Mail/AQuA/office/INBOX/Sent"
 set sendmail='{{ lookPath "msmtp" }} --account={{ .emailAccounts.AQuAOffice.accountName }} -t'
 set signature="~/.local/share/signatures/AQuAOffice"
+send-hook '%C aqua_all' 'set signature=""'
+send-hook '%C aqua_committee' 'set signature=""'
+send-hook '%C aqua_operations' 'set signature=""'
 save-hook . "~/Mail/AQuA/office/INBOX/Archive/%[%Y/%m]"
 
 # munge subjects -- institutional warnings
