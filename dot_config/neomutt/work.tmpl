@@ -22,6 +22,9 @@ set record="~/Mail/AQuA/office/INBOX/Sent"
 set sendmail='{{ lookPath "msmtp" }} --account={{ .emailAccounts.AQuAOffice.accountName }} -t'
 set signature="~/.local/share/signatures/AQuAOffice"
 
+# munge subjects -- institutional warnings
+subjectrx '\[EXT\]' '%R'
+
 # https://neomutt.org/guide/configuration#18-%C2%A0specify-default-fcc-and-or-save-mailbox
 save-hook . "~/Mail/AQuA/office/INBOX/Archive/%[%Y/%m]"
 fcc-hook . "~/Mail/AQuA/office/INBOX/Sent"
