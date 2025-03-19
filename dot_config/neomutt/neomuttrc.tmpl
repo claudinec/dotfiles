@@ -18,9 +18,9 @@ set index_format="%4C %Z %[%a %F %R] %-32.32L (%<l?%4l&%4c>) %-24.24g %-24.24b %
 set mbox_type=Maildir
 set pager_context=3
 set pager_index_lines=5
+set pager_read_delay=2
 set sendmail_wait=5
 set send_charset="utf-8"
-set sig_dashes=no   # sig files start with dashes because of other programs
 set sort="reverse-last-date"
 set sort_aux="date"
 set spool_file="inbox"
@@ -37,8 +37,8 @@ macro index,pager \cs <modify-labels>spam\ns "Label spam then prompt for new fol
 # MIME auto view.
 auto_view text/html
 
-# Call urlview.
-macro index,pager \cb |urlview\n
+# Call urlscan.
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan"
 
 #### Notmuch ####
 # Docs: https://neomutt.org/feature/notmuch
