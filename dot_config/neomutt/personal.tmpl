@@ -8,7 +8,7 @@ source "neomuttrc"
 mailboxes -nonotify -nopoll "~/Mail/Fastmail/INBOX"
 virtual-mailboxes all "notmuch://?query=not tag:aqua"
 virtual-mailboxes inbox "notmuch://?query=query:personal_inbox"
-virtual-mailboxes sent "notmuch://?query=tag:sent and not tag:aqua"
+virtual-mailboxes sent "notmuch://?query=query:personal_sent"
 virtual-mailboxes todo "notmuch://?query=query:personal_todo"
 
 # https://neomutt.org/guide/configuration.html#13-%C2%A0alternative-addresses

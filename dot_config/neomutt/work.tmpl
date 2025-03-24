@@ -8,6 +8,7 @@ source "neomuttrc"
 mailboxes -notify -nopoll "~/Mail/AQuA/office/INBOX" "~/Mail/Fastmail/311-AQuA"
 virtual-mailboxes all "notmuch://?query=query:aqua_all"
 virtual-mailboxes inbox "notmuch://?query=query:aqua_inbox"
+virtual-mailboxes sent "notmuch://?query=query:aqua_sent"
 virtual-mailboxes todo "notmuch://?query=query:aqua_todo"
 
 ## addresses and aliases
