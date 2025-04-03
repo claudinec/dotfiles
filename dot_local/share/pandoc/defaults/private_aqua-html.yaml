@@ -1,5 +1,6 @@
 # Defaults for AQuA HTML output.
-defaults: aqua
+defaults: all
 strip-comments: true
+wrap: none
 variables:
   linkcolor: #ec008c
