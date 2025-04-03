@@ -1,0 +1,5 @@
+defaults:
+- all
+metadata:
+  author: Claudine Chionh
+reference-doc: ${USERDATA}/odt/reference.odt
