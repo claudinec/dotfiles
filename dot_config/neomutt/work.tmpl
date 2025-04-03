@@ -14,6 +14,7 @@ virtual-mailboxes todo "notmuch://?query=query:aqua_todo"
 ## addresses and aliases
 set from={{ .emailAccounts.AQuAOffice.address }}
 set alias_file="$XDG_CONFIG_HOME/neomutt/aliases-work"
+set alias_format="%3i %f%t %-15a %-56A | %Y"
 source "aliases-work"
 group -group aqua_all -rx '.+@queerarchives\.org\.au'
 group -group vpc_all -rx '.+@pridecentre\.org\.au'
@@ -26,8 +27,6 @@ set record="~/Mail/AQuA/office/INBOX/Sent"
 set sendmail='{{ lookPath "msmtp" }} --account={{ .emailAccounts.AQuAOffice.accountName }} -t'
 set signature="~/.local/share/signatures/AQuAOffice"
 send-hook '%C aqua_all' 'set signature=""'
-send-hook '%C aqua_committee' 'set signature=""'
-send-hook '%C aqua_operations' 'set signature=""'
 save-hook . "~/Mail/AQuA/office/INBOX/Archive/%[%Y/%m]"
 
 # munge subjects -- institutional warnings
