@@ -11,21 +11,23 @@ virtual-mailboxes inbox "notmuch://?query=query:personal_inbox"
 virtual-mailboxes sent "notmuch://?query=query:personal_sent"
 virtual-mailboxes todo "notmuch://?query=query:personal_todo"
 
-# https://neomutt.org/guide/configuration.html#13-%C2%A0alternative-addresses
-alternates ".+@claudinec\.net"
+## addresses and aliases
 set from={{ .emailAccounts.Fastmail.address }}
+set alias_file="$XDG_CONFIG_HOME/neomutt/aliases-personal"
+source "aliases-personal"
+alternates ".+@claudinec\.net"
+alternates "claudine.*@fastmail\.fm"
+
+# send hooks
+send-hook '~C nearlyfreespeech.net' 'my_hdr From: claudine+nfsn@fastmail.fm'
+
+## additional config
 set index_format="%4C %Z %[%a %F %R] %-32.32L (%<l?%4l&%4c>) %-24.24g %-24.24b %s"
 set postponed="~/Mail/Fastmail/Drafts"
 set record="~/Mail/Fastmail/Sent"
 set sendmail='{{ lookPath "msmtp" }} --account={{ .emailAccounts.Fastmail.accountName }} -t'
 set signature="~/.local/share/signatures/Personal"
 set attach_save_dir="~/Desktop"
-
-# https://neomutt.org/guide/configuration#18-%C2%A0specify-default-fcc-and-or-save-mailbox
 save-hook . ~/Mail/Fastmail/Archive/
 fcc-hook . ~/Mail/Fastmail/Sent/%O
-
-## aliases
-set alias_file="$XDG_CONFIG_HOME/neomutt/aliases-personal"
-source "aliases-personal"
 
