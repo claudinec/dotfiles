@@ -3,4 +3,4 @@ defaults: aqua
 strip-comments: true
 wrap: none
 variables:
-  linkcolor: #ec008c
+  linkcolor: "#ec008c"
