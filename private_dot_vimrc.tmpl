@@ -11,11 +11,12 @@ Helptags
 """" OS appearance -> colour scheme
 " 0 = light mode or non-MacVim
 " 1 = dark mode
-if v:os_appearance
-    colorscheme catppuccin_macchiato
-else
-    colorscheme catppuccin_latte
-endif
+" if v:os_appearance
+"     colorscheme catppuccin_macchiato
+" else
+"     colorscheme catppuccin_latte
+" endif
+colorscheme catppuccin_macchiato
 
 set autochdir
 set autoread
@@ -106,7 +107,7 @@ let g:vimwiki_emoji_enable = 2
 let g:vimwiki_ext2syntax = {'.mediawiki': 'media'}
 let g:vimwiki_folding = 'expr'
 let g:vimwiki_toc_header_level = 2
-let g:vimwiki_list = [{'path': '~/Private/vimwiki', 'index': '000-index', 'links_space_char': '_', 'syntax': 'default', 'ext': '.wiki', 'nested_syntaxes': {'markdown': 'markdown', 'sh': 'shell'}, 'auto_tags': 1, 'auto_export': 1}]
+let g:vimwiki_list = [{'path': '~/Private/vimwiki', 'index': '00index', 'links_space_char': '_', 'syntax': 'default', 'ext': '.wiki', 'nested_syntaxes': {'markdown': 'markdown', 'sh': 'shell'}, 'auto_tags': 1, 'auto_export': 1}]
 
 "" Startify
 let g:startify_bookmarks = [ {'f': '~/.local/share/chezmoi/dot_config/fish/config.fish.tmpl'}, {'g': '~/.local/share/chezmoi/dot_gvimrc.tmpl'}, {'v': '~/.local/share/chezmoi/private_dot_vimrc.tmpl'} ]
