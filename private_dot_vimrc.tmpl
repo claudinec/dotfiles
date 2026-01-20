@@ -29,6 +29,8 @@ set cindent
 set completeopt=menu,longest,preview
 set confirm
 
+set diffopt=vertical
+
 {{ if eq .chezmoi.fqdnHostname "claudinec.nfshost.com" -}}
 set dir=/home/tmp
 {{- else }}
